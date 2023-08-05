@@ -7,14 +7,24 @@ site_description: 王进钊的个人网站
 # [Navigtion]
 nav:
   - 讲稿:
-    - docs\LECTURE\index.md
-  - 课程
-  - 博客
-  - 学术
-  - 开发
-  - 网站
-  - 随笔
-  - 我
+    - LECTURE\index.md
+  - 课程:
+    - COURSE\index.md
+  - 博客:
+    - BLOG\index.md
+  - 学术:
+    - ACADEMIC\index.md
+  - 开发:
+    - DEV\index.md
+  - 网站:
+    - WEBSITE/index.md # 访客打开网站第一个看到的是 docs/index.md（会报错 The following pages exist in the docs directory, but are not included in the "nav" configuration: index.md 不要紧）  如果访客之后想要重新看到这个界面  可以在 docs/WEBSITE/index.md 找到
+    - WEBSITE/build.md
+    - WEBSITE/help.md
+    - WEBSITE/test.md
+  - 随笔:
+    - ESSAY/index.md
+  - 我:
+    - ME\index.md
 # [UI]
 ## [top]
 theme:
