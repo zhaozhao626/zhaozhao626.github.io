@@ -10,6 +10,8 @@ nav:
     - LECTURE/index.md
   - 课程:
     - COURSE/index.md
+    - 英语学习:
+      - 
   - 博客:
     - BLOG/index.md
     - BLOG/others.md
@@ -103,7 +105,7 @@ extra:
   social: # icons
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/24502827
-      name: Bilibili | 王进钊619 # 鼠标悬浮提示
+      name: Bilibili | 王进钊 # 鼠标悬浮提示
     - icon: fontawesome/brands/github
       link: https://github.com/zhaozhao626
       name: GitHub | zhaozhao626
