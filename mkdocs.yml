@@ -7,15 +7,52 @@ site_description: 王进钊的个人网站
 # [Navigtion]
 nav:
   - 讲稿:
-    - LECTURE\index.md
+    - LECTURE/index.md
   - 课程:
-    - COURSE\index.md
+    - COURSE/index.md
   - 博客:
-    - BLOG\index.md
+    - BLOG/index.md
+    - BLOG/others.md
+    - OS:
+      - BLOG/OS/fork-exec-spawn.md
+      - BLOG/OS/fork-example.md
+    - Linux:
+      - BLOG/Linux/vim.md
+      - BLOG/Linux/tmux.md
+      - BLOG/Linux/unix.md
+      - BLOG/Linux/kernel-compile.md
+      - BLOG/Linux/pi-start.md
+    - GitHub:
+      - BLOG/GitHub/mirror.md
+    - Markdown:
+      - BLOG/Markdown/grammars.md
+      - BLOG/Markdown/mkdocs-site.md
+      - BLOG/Markdown/mdbook-site.md
+      - BLOG/Markdown/github-pages.md
+    - 基础:
+      - 数学:
+        - BLOG/Foundation/Math/latex.md
+        - BLOG/Foundation/Math/linear.md
+        - BLOG/Foundation/Math/taylor.md
+        - BLOG/Foundation/Math/max-pr.md
+        - BLOG/Foundation/Math/sympy-det.md
+      - 物理:
+        - BLOG/Foundation/Physics/guass-stokes.md
+        - BLOG/Foundation/Physics/electromagnetics.md
+      - 网络:
+        - BLOG/Network/learning.md
+        - BLOG/Network/nouns.md
+      - 机器学习:
+        - BLOG/Deeplearning/d2l.md
+        - BLOG/Deeplearning/speech-recognition.md
+        - BLOG/Deeplearning/parallel-load.md
+        - DDP:
+          - BLOG/Deeplearning/ddp.md
+          - BLOG/Deeplearning/ddp-note.md
   - 学术:
-    - ACADEMIC\index.md
+    - ACADEMIC/index.md
   - 开发:
-    - DEV\index.md
+    - DEV/index.md
   - 网站:
     - WEBSITE/index.md # 访客打开网站第一个看到的是 docs/index.md（会报错 The following pages exist in the docs directory, but are not included in the "nav" configuration: index.md 不要紧）  如果访客之后想要重新看到这个界面  可以在 docs/WEBSITE/index.md 找到
     - WEBSITE/build.md
@@ -24,7 +61,7 @@ nav:
   - 随笔:
     - ESSAY/index.md
   - 我:
-    - ME\index.md
+    - ME/index.md
 # [UI]
 ## [top]
 theme:
