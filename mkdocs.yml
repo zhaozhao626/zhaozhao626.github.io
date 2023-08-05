@@ -6,7 +6,8 @@ site_description: 王进钊的个人网站
 
 # [Navigtion]
 nav:
-  - 讲稿
+  - 讲稿:
+    - docs\LECTURE\index.md
   - 课程
   - 博客
   - 学术

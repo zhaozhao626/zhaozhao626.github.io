@@ -1,17 +1,12 @@
-# Welcome to MkDocs
+# 你好
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+这里是王进钊的个人网站 <https://zhaozhao626.github.io>
 
-## Commands
+可以通过邮箱jinzhaowang@stu.usc.edu.cn联系我
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+我的csdn博客主页是：[要努力呦_-CSDN博客](https://blog.csdn.net/wjz0626?spm=1011.2480.3001.5343)
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- 通过主题和目录以打开文章
+	- PC端 在上方标签栏选择主题 在左侧目录选择文章
+	- 移动端 点击左上角图标选择主题和文章
+- 搜索关键词以打开文章
