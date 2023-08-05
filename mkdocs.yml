@@ -1,7 +1,19 @@
-site_name: My Docs
+# [Info]
+site_name: 王进钊的个人网站 # 左上角标题
+site_url: https://zhaozhao626.github.io
+site_author: 王进钊
+site_description: 王进钊的个人网站
 
-
-
+# [Navigtion]
+nav:
+  - 讲稿:
+  - 课程:
+  - 博客:
+  - 学术:
+  - 开发:
+  - 网站:
+  - 随笔:
+  - 我:
 # [UI]
 ## [top]
 theme:
@@ -28,6 +40,7 @@ theme:
     - search.highlight # 搜索出的文章关键词加入高亮
     - content.code.copy # 可以通过按钮复制代码
     - content.action.edit # 点击按钮跳转到编辑页面  需要结合 edit_uri 一起使用
+    - navigation.path
   language: zh # 一些提示性的文字会变成中文
   icon:
     repo: fontawesome/brands/github
