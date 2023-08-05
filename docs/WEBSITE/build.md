@@ -1,5 +1,6 @@
 # 网站构建说明
-
+参考 [csdn参考](http://t.csdn.cn/EABLg)
+[B站参考](https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site/)
 ## 介绍
 
 我使用 [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) 将 `Markdown文件` 渲染为 `HTML网页` 并使用 `GitHub Pages` 进行发布

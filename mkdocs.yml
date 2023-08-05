@@ -10,8 +10,7 @@ nav:
     - LECTURE/index.md
   - 课程:
     - COURSE/index.md
-    - 英语学习:
-      - 
+    - 英语学习
   - 博客:
     - BLOG/index.md
     - BLOG/others.md
@@ -64,6 +63,7 @@ nav:
     - ESSAY/index.md
   - 我:
     - ME/index.md
+  
 # [UI]
 ## [top]
 theme:
@@ -139,6 +139,6 @@ extra_javascript:
   - mkdocs/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
-extra_css:
-  - mkdocs/css/no-footer.css # 不使用底部的翻页
-  - mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols
+# extra_css:
+  # - mkdocs/css/no-footer.css # 不使用底部的翻页
+  # - mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols
