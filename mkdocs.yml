@@ -8,9 +8,11 @@ site_description: 王进钊的个人网站
 nav:
   - 讲稿:
     - LECTURE/index.md
-  - 课程:
+  - 课程学习:
     - COURSE/index.md
     - 英语学习
+  - 算法学习:
+    - ALGORITHM/算法模板.md
   - 博客:
     - BLOG/index.md
     - BLOG/others.md
