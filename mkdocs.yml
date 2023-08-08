@@ -13,6 +13,7 @@ nav:
     - 英语学习
   - 算法学习:
     - ALGORITHM/算法模板.md
+    - ALGORITHM/算法学习.md
   - 博客:
     - BLOG/index.md
     - BLOG/others.md
@@ -39,9 +40,9 @@ nav:
         - BLOG/Foundation/Math/taylor.md
         - BLOG/Foundation/Math/max-pr.md
         - BLOG/Foundation/Math/sympy-det.md
-      - 物理:
-        - BLOG/Foundation/Physics/guass-stokes.md
-        - BLOG/Foundation/Physics/electromagnetics.md
+      # - 物理:
+      #   - BLOG/Foundation/Physics/guass-stokes.md
+      #   - BLOG/Foundation/Physics/electromagnetics.md
       - 网络:
         - BLOG/Network/learning.md
         - BLOG/Network/nouns.md
