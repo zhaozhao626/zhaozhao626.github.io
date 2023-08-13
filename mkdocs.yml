@@ -16,6 +16,8 @@ nav:
     - ALGORITHM/算法学习.md
     - ALGORITHM/数组.md
     - ALGORITHM/链表.md
+    - ALGORITHM/哈希表.md
+    - ALGORITHM/字符串.md
   - 博客:
     - BLOG/index.md
     - BLOG/others.md
@@ -36,25 +38,25 @@ nav:
       - BLOG/Markdown/mdbook-site.md
       - BLOG/Markdown/github-pages.md
     - 基础:
-      - 数学:
-        - BLOG/Foundation/Math/latex.md
-        - BLOG/Foundation/Math/linear.md
-        - BLOG/Foundation/Math/taylor.md
-        - BLOG/Foundation/Math/max-pr.md
-        - BLOG/Foundation/Math/sympy-det.md
-      # - 物理:
-      #   - BLOG/Foundation/Physics/guass-stokes.md
-      #   - BLOG/Foundation/Physics/electromagnetics.md
+      # - 数学:
+      #   - BLOG/Foundation/Math/latex.md
+      #   - BLOG/Foundation/Math/linear.md
+      #   - BLOG/Foundation/Math/taylor.md
+      #   - BLOG/Foundation/Math/max-pr.md
+      #   - BLOG/Foundation/Math/sympy-det.md
+      # # - 物理:
+      # #   - BLOG/Foundation/Physics/guass-stokes.md
+      # #   - BLOG/Foundation/Physics/electromagnetics.md
       - 网络:
         - BLOG/Network/learning.md
         - BLOG/Network/nouns.md
-      - 机器学习:
-        - BLOG/Deeplearning/d2l.md
-        - BLOG/Deeplearning/speech-recognition.md
-        - BLOG/Deeplearning/parallel-load.md
-        - DDP:
-          - BLOG/Deeplearning/ddp.md
-          - BLOG/Deeplearning/ddp-note.md
+      # - 机器学习:
+      #   - BLOG/Deeplearning/d2l.md
+      #   - BLOG/Deeplearning/speech-recognition.md
+      #   - BLOG/Deeplearning/parallel-load.md
+      #   - DDP:
+      #     - BLOG/Deeplearning/ddp.md
+      #     - BLOG/Deeplearning/ddp-note.md
   - 学术:
     - ACADEMIC/index.md
   - 开发:
