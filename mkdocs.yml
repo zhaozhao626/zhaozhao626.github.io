@@ -21,6 +21,10 @@ nav:
   - 博客:
     - BLOG/index.md
     - BLOG/others.md
+    - C++:
+      - BLOG/C++/C++学习.md
+      - BLOG/C++/C++资源总结.md
+      - BLOG/C++/输入输出练习.md
     - OS:
       - BLOG/OS/fork-exec-spawn.md
       - BLOG/OS/fork-example.md
