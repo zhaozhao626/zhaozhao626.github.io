@@ -51,8 +51,8 @@ nav:
         - BLOG/Network/learning.md
         - BLOG/Network/nouns.md
     
-    # - 装机知识:
-    - BLOG/pcDIY/diy.md
+    - 装机知识:
+      - BLOG/pcDIY/diy.md
       # - 机器学习:
       #   - BLOG/Deeplearning/d2l.md
       #   - BLOG/Deeplearning/speech-recognition.md
