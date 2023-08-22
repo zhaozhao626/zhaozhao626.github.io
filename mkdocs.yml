@@ -12,12 +12,14 @@ nav:
     - COURSE/index.md
     - 英语学习
   - 算法学习:
+    - ALGORITHM/算法基础篇.md
     - ALGORITHM/算法模板.md
     - ALGORITHM/算法学习.md
     - ALGORITHM/数组.md
     - ALGORITHM/链表.md
     - ALGORITHM/哈希表.md
     - ALGORITHM/字符串.md
+    
   - 博客:
     - BLOG/index.md
     - BLOG/others.md
