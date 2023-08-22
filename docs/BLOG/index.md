@@ -4,7 +4,7 @@
 
 ## C++面试100问
 
-【【C++面试100问】】 https://www.bilibili.com/video/BV1iu411W79e/?share_source=copy_web&vd_source=f42e37f0bbba1580efef778a0b62ade1
+[C++面试100问](https://www.bilibili.com/video/BV1iu411W79e/?share_source=copy_web&vd_source=f42e37f0bbba1580efef778a0b62ade1)
 
 博主开源仓库：[lxiao217/study428: 深度学习、计算机视觉、OpenCV、自动驾驶、SLAM、C++/Python语言开发学习分享 (github.com)](https://github.com/lxiao217/study428/tree/main)
 
