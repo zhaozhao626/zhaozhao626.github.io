@@ -9,7 +9,7 @@
 
 这里是王进钊的个人网站 <https://zhaozhao626.github.io>
 
-可以通过[邮箱jinzhaowang@stu.usc.edu.cn](jinzhaowang@stu.usc.edu.cn)联系我
+可以通过<jinzhaowang@stu.usc.edu.cn>联系我
 
 我的csdn博客主页是：[要努力呦_-CSDN博客](https://blog.csdn.net/wjz0626?spm=1011.2480.3001.5343)
 
