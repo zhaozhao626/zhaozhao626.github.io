@@ -1,22 +1,12 @@
-<!--
- * @Descripttion: 
- * @Author: wjz
- * @Date: 2023-08-23 19:02:45
- * @LastEditors: wjz
- * @LastEditTime: 2023-08-23 19:22:08
--->
+
 
 <h1 align="center">
 AcadHomepage
 </h1>
 
 
-<div align="center">
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [English README](../README.md) 
-</div>
+
+
 
 <p align="center">一个现代、响应式的个人学术主页</p>
 
@@ -28,6 +18,7 @@ AcadHomepage
 </p>
 
 一些例子：
+- [RayeRen/acad-homepage.github.io: AcadHomepage: A Modern and Responsive Academic Personal Homepage](https://github.com/RayeRen/acad-homepage.github.io)
 - [样例页面](https://rayeren.github.io/acad-homepage.github.io/)
 - [作者的个人主页](https://rayeren.github.io/)
 
