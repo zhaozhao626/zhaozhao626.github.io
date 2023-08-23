@@ -1,3 +1,10 @@
+<!--
+ * @Descripttion: 
+ * @Author: wjz
+ * @Date: 2023-08-23 19:02:45
+ * @LastEditors: wjz
+ * @LastEditTime: 2023-08-23 19:22:08
+-->
 
 <h1 align="center">
 AcadHomepage
@@ -16,7 +23,7 @@ AcadHomepage
 
 <p align="center">
     <br>
-    <img src="./screenshot.png" width="100%"/>
+    <img src="screenshot.png" width="100%"/>
     <br>
 </p>
 
