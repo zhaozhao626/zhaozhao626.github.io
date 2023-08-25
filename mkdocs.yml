@@ -84,6 +84,7 @@ nav:
 ## [top]
 theme:
   name: material
+  logo: assets/icon_512.png
   palette:
     - scheme: default # 日间模式
       primary: indigo # 上方的
