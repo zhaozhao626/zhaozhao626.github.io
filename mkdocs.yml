@@ -22,6 +22,8 @@ nav:
   - 博客:
     - BLOG/index.md
     - BLOG/others.md
+    - 机器学习:
+      - BLOG/Machinelearning/决策树和随机森林.md
     - C++:
       - BLOG/C++/C++学习.md
       - BLOG/C++/C++资源总结.md
