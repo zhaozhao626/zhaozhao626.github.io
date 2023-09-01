@@ -12,21 +12,27 @@
         <meta name="author" content="王进钊">
       
       
+        <link rel="canonical" href="https://zhaozhao626.github.io/BLOG/OS/fork-exec-spawn/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="prev" href="../../CV/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%9A%84%E5%A4%A7%E4%B8%80%E7%BB%9F%E4%B9%8B%E8%B7%AF/">
+      
+      
+        <link rel="next" href="../fork-example/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>王进钊的个人网站</title>
+        <title>fork/exec/spawn 辨析 - 王进钊的个人网站</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#forkexecspawn" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -82,9 +93,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="王进钊的个人网站" class="md-header__button md-logo" aria-label="王进钊的个人网站" data-md-component="logo">
+    <a href="../../.." title="王进钊的个人网站" class="md-header__button md-logo" aria-label="王进钊的个人网站" data-md-component="logo">
       
-  <img src="/assets/icon_512.png" alt="logo">
+  <img src="../../../assets/icon_512.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -100,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              fork/exec/spawn 辨析
             
           </span>
         </div>
@@ -200,7 +211,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/LECTURE/" class="md-tabs__link">
+      <a href="../../../LECTURE/" class="md-tabs__link">
         讲稿
       </a>
     </li>
@@ -216,7 +227,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/COURSE/" class="md-tabs__link">
+      <a href="../../../COURSE/" class="md-tabs__link">
         课程学习
       </a>
     </li>
@@ -232,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/ALGORITHM/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/" class="md-tabs__link">
+      <a href="../../../ALGORITHM/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/" class="md-tabs__link">
         算法学习
       </a>
     </li>
@@ -242,13 +253,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/BLOG/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         博客
       </a>
     </li>
@@ -264,7 +277,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/ACADEMIC/" class="md-tabs__link">
+      <a href="../../../ACADEMIC/" class="md-tabs__link">
         学术
       </a>
     </li>
@@ -280,7 +293,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/DEV/" class="md-tabs__link">
+      <a href="../../../DEV/" class="md-tabs__link">
         开发
       </a>
     </li>
@@ -296,7 +309,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/WEBSITE/" class="md-tabs__link">
+      <a href="../../../WEBSITE/" class="md-tabs__link">
         网站
       </a>
     </li>
@@ -312,7 +325,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/ESSAY/" class="md-tabs__link">
+      <a href="../../../ESSAY/" class="md-tabs__link">
         随笔
       </a>
     </li>
@@ -328,7 +341,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/ME/" class="md-tabs__link">
+      <a href="../../../ME/" class="md-tabs__link">
         我
       </a>
     </li>
@@ -362,9 +375,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="王进钊的个人网站" class="md-nav__button md-logo" aria-label="王进钊的个人网站" data-md-component="logo">
+    <a href="../../.." title="王进钊的个人网站" class="md-nav__button md-logo" aria-label="王进钊的个人网站" data-md-component="logo">
       
-  <img src="/assets/icon_512.png" alt="logo">
+  <img src="../../../assets/icon_512.png" alt="logo">
 
     </a>
     王进钊的个人网站
@@ -410,7 +423,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/LECTURE/">讲稿</a>
+          <a href="../../../LECTURE/">讲稿</a>
           
         </div>
       
@@ -457,7 +470,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/COURSE/">课程学习</a>
+          <a href="../../../COURSE/">课程学习</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -480,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/英语学习" class="md-nav__link">
+      <a href="../../../英语学习" class="md-nav__link">
         None
       </a>
     </li>
@@ -543,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ALGORITHM/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/" class="md-nav__link">
+      <a href="../../../ALGORITHM/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/" class="md-nav__link">
         算法笔记算法基础篇
       </a>
     </li>
@@ -557,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ALGORITHM/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" class="md-nav__link">
+      <a href="../../../ALGORITHM/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" class="md-nav__link">
         算法模板
       </a>
     </li>
@@ -571,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ALGORITHM/%E6%95%B0%E7%BB%84/" class="md-nav__link">
+      <a href="../../../ALGORITHM/%E6%95%B0%E7%BB%84/" class="md-nav__link">
         数组
       </a>
     </li>
@@ -585,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ALGORITHM/%E9%93%BE%E8%A1%A8/" class="md-nav__link">
+      <a href="../../../ALGORITHM/%E9%93%BE%E8%A1%A8/" class="md-nav__link">
         链表
       </a>
     </li>
@@ -599,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ALGORITHM/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="md-nav__link">
+      <a href="../../../ALGORITHM/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="md-nav__link">
         哈希表
       </a>
     </li>
@@ -613,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ALGORITHM/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="md-nav__link">
+      <a href="../../../ALGORITHM/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="md-nav__link">
         字符串
       </a>
     </li>
@@ -633,14 +646,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
         
@@ -673,7 +688,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/BLOG/">博客</a>
+          <a href="../../">博客</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -681,7 +696,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           博客
@@ -696,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/others/" class="md-nav__link">
+      <a href="../../others/" class="md-nav__link">
         优质博客链接
       </a>
     </li>
@@ -741,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Machinelearning/%E5%86%B3%E7%AD%96%E6%A0%91%E5%92%8C%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" class="md-nav__link">
+      <a href="../../Machinelearning/%E5%86%B3%E7%AD%96%E6%A0%91%E5%92%8C%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" class="md-nav__link">
         决策树和随机森林
       </a>
     </li>
@@ -797,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
+      <a href="../../C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
         C++学习
       </a>
     </li>
@@ -811,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/C%2B%2B/C%2B%2B%E8%B5%84%E6%BA%90%E6%80%BB%E7%BB%93/" class="md-nav__link">
+      <a href="../../C%2B%2B/C%2B%2B%E8%B5%84%E6%BA%90%E6%80%BB%E7%BB%93/" class="md-nav__link">
         C++ 资源总结
       </a>
     </li>
@@ -825,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/C%2B%2B/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%BB%83%E4%B9%A0/" class="md-nav__link">
+      <a href="../../C%2B%2B/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%BB%83%E4%B9%A0/" class="md-nav__link">
         输入输出练习
       </a>
     </li>
@@ -877,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/CV/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%9A%84%E5%A4%A7%E4%B8%80%E7%BB%9F%E4%B9%8B%E8%B7%AF/" class="md-nav__link">
+      <a href="../../CV/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%9A%84%E5%A4%A7%E4%B8%80%E7%BB%9F%E4%B9%8B%E8%B7%AF/" class="md-nav__link">
         多模态的大一统之路
       </a>
     </li>
@@ -896,14 +911,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
       
       
         
@@ -918,7 +935,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_6">
           <span class="md-nav__icon md-icon"></span>
           OS
@@ -929,11 +946,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/BLOG/OS/fork-exec-spawn/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          fork/exec/spawn 辨析
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         fork/exec/spawn 辨析
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    答疑
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -945,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/OS/fork-example/" class="md-nav__link">
+      <a href="../fork-example/" class="md-nav__link">
         fork 例
       </a>
     </li>
@@ -1005,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Linux/vim/" class="md-nav__link">
+      <a href="../../Linux/vim/" class="md-nav__link">
         Vim 学习笔记
       </a>
     </li>
@@ -1019,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Linux/tmux/" class="md-nav__link">
+      <a href="../../Linux/tmux/" class="md-nav__link">
         tmux 使用指南
       </a>
     </li>
@@ -1033,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Linux/unix/" class="md-nav__link">
+      <a href="../../Linux/unix/" class="md-nav__link">
         Unix and Linux
       </a>
     </li>
@@ -1047,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Linux/kernel-compile/" class="md-nav__link">
+      <a href="../../Linux/kernel-compile/" class="md-nav__link">
         Linux 内核编译尝试
       </a>
     </li>
@@ -1061,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Linux/pi-start/" class="md-nav__link">
+      <a href="../../Linux/pi-start/" class="md-nav__link">
         树莓派入门指南
       </a>
     </li>
@@ -1113,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/GitHub/mirror/" class="md-nav__link">
+      <a href="../../GitHub/mirror/" class="md-nav__link">
         GitHub 镜像到 Gitee
       </a>
     </li>
@@ -1171,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Markdown/grammars/" class="md-nav__link">
+      <a href="../../Markdown/grammars/" class="md-nav__link">
         Markdown 语法学习 精简版
       </a>
     </li>
@@ -1185,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Markdown/mkdocs-site/" class="md-nav__link">
+      <a href="../../Markdown/mkdocs-site/" class="md-nav__link">
         Publish a Website with Material for MkDocs and GitHub Pages
       </a>
     </li>
@@ -1199,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Markdown/mdbook-site/" class="md-nav__link">
+      <a href="../../Markdown/mdbook-site/" class="md-nav__link">
         Publish a Website with mdBook and GitHub Pages
       </a>
     </li>
@@ -1213,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Markdown/github-pages/" class="md-nav__link">
+      <a href="../../Markdown/github-pages/" class="md-nav__link">
         GitHub Pages
       </a>
     </li>
@@ -1298,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Network/learning/" class="md-nav__link">
+      <a href="../../Network/learning/" class="md-nav__link">
         计算机网络 总结
       </a>
     </li>
@@ -1312,7 +1377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/Network/nouns/" class="md-nav__link">
+      <a href="../../Network/nouns/" class="md-nav__link">
         计算机网络 专有名词速查
       </a>
     </li>
@@ -1371,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/BLOG/pcDIY/diy/" class="md-nav__link">
+      <a href="../../pcDIY/diy/" class="md-nav__link">
         装机知识
       </a>
     </li>
@@ -1418,7 +1483,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/ACADEMIC/">学术</a>
+          <a href="../../../ACADEMIC/">学术</a>
           
         </div>
       
@@ -1463,7 +1528,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/DEV/">开发</a>
+          <a href="../../../DEV/">开发</a>
           
         </div>
       
@@ -1516,7 +1581,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/WEBSITE/">网站</a>
+          <a href="../../../WEBSITE/">网站</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1539,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/WEBSITE/build/" class="md-nav__link">
+      <a href="../../../WEBSITE/build/" class="md-nav__link">
         Build
       </a>
     </li>
@@ -1553,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/WEBSITE/help/" class="md-nav__link">
+      <a href="../../../WEBSITE/help/" class="md-nav__link">
         文章编写帮助
       </a>
     </li>
@@ -1567,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/WEBSITE/test/" class="md-nav__link">
+      <a href="../../../WEBSITE/test/" class="md-nav__link">
         测试文档
       </a>
     </li>
@@ -1581,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/WEBSITE/AcadHomepage/" class="md-nav__link">
+      <a href="../../../WEBSITE/AcadHomepage/" class="md-nav__link">
         AcadHomepage
       </a>
     </li>
@@ -1621,7 +1686,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/ESSAY/">随笔</a>
+          <a href="../../../ESSAY/">随笔</a>
           
         </div>
       
@@ -1666,7 +1731,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/ME/">我</a>
+          <a href="../../../ME/">我</a>
           
         </div>
       
@@ -1702,6 +1767,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    答疑
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1713,8 +1802,48 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
 
+
+
+  
+    <a href="https://github.com/zhaozhao626/zhaozhao626.github.io/edit/main/docs/BLOG/OS/fork-exec-spawn.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="forkexecspawn">fork/exec/spawn 辨析<a class="headerlink" href="#forkexecspawn" title="Permanent link">&para;</a></h1>
+<h2 id="_1">总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>关于子进程父进程同步和等待这个问题，我没有考虑时间片轮转，也就是分时的操作系统；这个就是学长说的调度，宏观上其实是“同步”的。</p>
+<h2 id="_2">答疑<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>我：有几个关于fork/exec/spawn的疑问...</p>
+<ol>
+<li>「exec类比 老妈炒西红柿鸡蛋炒了一半，突然有别的事情要处理，完全把看锅的事情交给我了(老妈exec我)，我炒好之后装盘端到桌子上（我exit）。」这个理解对吗？</li>
+<li>「fork类比 老妈要做西红柿炒鸡蛋，让我帮忙切西红柿和打鸡蛋(父进程调用fork创建子进程)，然后开始等我(父进程waitpid)；我开始搞(子进程exec)，搞好之后把切好的西红柿和蛋液给她(子进程exit)，她开始炒(父进程继续运行)；炒好之后老妈装盘端到桌子上(父进程exit)，结束。」这个理解对吗？</li>
+<li>exec是不是和高级语言中的一行行执行是一样的？或者说，A代码块执行完开始执行下面的B代码块？</li>
+<li>fork+exec是不是和高级语言中的函数调用一样呢？还是说fork+exec+wait和高级语言中的函数调用一样呢？</li>
+<li>（关于子进程运行过程中父进程是否可以同步运行）如果 fork+exec和高级语言中的函数调用一样，高级语言中函数在执行时原来的语句相当于是在等待的（对应指令集的指令在单核运行时只能一条一条执行） —— 我想知道 fork之后 父进程是完全停止以等待子进程结束吗？还是说父进程在子进程执行的同时也在执行呢？（我在准备食材的时候，老妈在一直等我，她在等我的过程中是不是可以同时把锅加起来，把油倒进锅里，把火开开等油热？还是因为等我什么都不做呢？）</li>
+<li>（关于父进程等待子过程）是父进程<strong>每隔一段时间就瞅瞅子进程是不是结束了</strong>来判断子进程是否结束？还是子进程结束之后<strong>通知</strong>父进程说已经结束了呢？（老妈要等我所以每隔一分钟看一下我是不是搞完了？还是说我这边准备完了可以<strong>告诉</strong>老妈说我搞完了？）</li>
+<li>「spawn基本实现了fork+exec，给用户提供了一种简单的调用方式，但单独fork和exec的各种组合能实现比spawn更强大的功能。」这样的理解对吗？</li>
+<li>我们在ch5练习中实现的spawn可以只是fork+exec，但也可以是与fork+exec功能一致的一个系统调用，以不同方式实现（不必像fork一样复制父进程的地址空间）。是吗？</li>
+</ol>
+<hr />
+<p>助教：</p>
+<p>1，2：可以这样理解
+3，4，5：最好不要用函数调用来理解，实际上从调度的角度来看，exec只是我把相应的CPU使用权给了子进程，父进程又回到了队列里，正常的进行调度，宏观上可以认为它们都在执行。
+6：错误，实际上上一个解答应该可以解答你的问题。建议仔细阅读fork、exec等内容的实验代码，以及一些进程调度的实现，应该可以帮助正确理解
+7：是的
+8：功能上与fork+exec一致，但实现不能一致，因为有一些规定上的差异，可以阅读guide</p>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1775,13 +1904,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "navigation.path"], "search": "/assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "navigation.path"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
-          <script src="/mkdocs/javascripts/mathjax.js"></script>
+          <script src="../../../mkdocs/javascripts/mathjax.js"></script>
         
       
         

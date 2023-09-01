@@ -1,0 +1,3791 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="王进钊的个人网站">
+      
+      
+        <meta name="author" content="王进钊">
+      
+      
+        <link rel="canonical" href="https://zhaozhao626.github.io/BLOG/C%2B%2B/C%2B%2B%E8%B5%84%E6%BA%90%E6%80%BB%E7%BB%93/">
+      
+      
+        <link rel="prev" href="../C%2B%2B%E5%AD%A6%E4%B9%A0/">
+      
+      
+        <link rel="next" href="../%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%BB%83%E4%B9%A0/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>C++ 资源总结 - 王进钊的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="王进钊的个人网站" class="md-header__button md-logo" aria-label="王进钊的个人网站" data-md-component="logo">
+      
+  <img src="../../../assets/icon_512.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            王进钊的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C++ 资源总结
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/zhaozhao626/zhaozhao626.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zhaozhao626.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LECTURE/" class="md-tabs__link">
+        讲稿
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../COURSE/" class="md-tabs__link">
+        课程学习
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ALGORITHM/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/" class="md-tabs__link">
+        算法学习
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        博客
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ACADEMIC/" class="md-tabs__link">
+        学术
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../DEV/" class="md-tabs__link">
+        开发
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../WEBSITE/" class="md-tabs__link">
+        网站
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ESSAY/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ME/" class="md-tabs__link">
+        我
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="王进钊的个人网站" class="md-nav__button md-logo" aria-label="王进钊的个人网站" data-md-component="logo">
+      
+  <img src="../../../assets/icon_512.png" alt="logo">
+
+    </a>
+    王进钊的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zhaozhao626/zhaozhao626.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zhaozhao626.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../LECTURE/">讲稿</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          讲稿
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../COURSE/">课程学习</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          课程学习
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../英语学习" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          算法学习
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          算法学习
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/" class="md-nav__link">
+        算法笔记算法基础篇
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" class="md-nav__link">
+        算法模板
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/%E6%95%B0%E7%BB%84/" class="md-nav__link">
+        数组
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/%E9%93%BE%E8%A1%A8/" class="md-nav__link">
+        链表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="md-nav__link">
+        哈希表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="md-nav__link">
+        字符串
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">博客</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          博客
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/" class="md-nav__link">
+        优质博客链接
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          机器学习
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          机器学习
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machinelearning/%E5%86%B3%E7%AD%96%E6%A0%91%E5%92%8C%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" class="md-nav__link">
+        决策树和随机森林
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          C++
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
+        C++学习
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          C++ 资源总结
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        C++ 资源总结
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    标准库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    框架
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    人工智能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    异步事件循环
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    音频
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    生态学
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    比特流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    化学
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    命令行界面
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    压缩
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    并发性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    容器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    密码学
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    CSV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    调试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    字体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    游戏引擎
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    图形用户界面
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    图形
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    图像处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    国际化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    进程间通信
+  </a>
+  
+    <nav class="md-nav" aria-label="进程间通信">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    Json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    日志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    机器学习
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    数学
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    内存分配
+  </a>
+  
+    <nav class="md-nav" aria-label="内存分配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    多媒体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    网络
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf" class="md-nav__link">
+    PDF
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    物理学
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    映射
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    正则表达式
+  </a>
+  
+    <nav class="md-nav" aria-label="正则表达式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    机器人学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    科学计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    序列化
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    排序
+  </a>
+  
+    <nav class="md-nav" aria-label="排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    视频
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    虚拟机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web应用框架
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    XML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    多项混杂
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    软件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    编译器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    在线编译器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    调试器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    集成开发环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    构建系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    静态代码分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    编码样式工具
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%BB%83%E4%B9%A0/" class="md-nav__link">
+        输入输出练习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          CV
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          CV
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CV/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%9A%84%E5%A4%A7%E4%B8%80%E7%BB%9F%E4%B9%8B%E8%B7%AF/" class="md-nav__link">
+        多模态的大一统之路
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+          OS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          OS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/fork-exec-spawn/" class="md-nav__link">
+        fork/exec/spawn 辨析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/fork-example/" class="md-nav__link">
+        fork 例
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/vim/" class="md-nav__link">
+        Vim 学习笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/tmux/" class="md-nav__link">
+        tmux 使用指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/unix/" class="md-nav__link">
+        Unix and Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/kernel-compile/" class="md-nav__link">
+        Linux 内核编译尝试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/pi-start/" class="md-nav__link">
+        树莓派入门指南
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+          GitHub
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          GitHub
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GitHub/mirror/" class="md-nav__link">
+        GitHub 镜像到 Gitee
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+          Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/grammars/" class="md-nav__link">
+        Markdown 语法学习 精简版
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/mkdocs-site/" class="md-nav__link">
+        Publish a Website with Material for MkDocs and GitHub Pages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/mdbook-site/" class="md-nav__link">
+        Publish a Website with mdBook and GitHub Pages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/github-pages/" class="md-nav__link">
+        GitHub Pages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+          基础
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_1" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_10_1" id="__nav_4_10_1_label" tabindex="0">
+          网络
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_10_1">
+          <span class="md-nav__icon md-icon"></span>
+          网络
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/learning/" class="md-nav__link">
+        计算机网络 总结
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/nouns/" class="md-nav__link">
+        计算机网络 专有名词速查
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+          装机知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_11">
+          <span class="md-nav__icon md-icon"></span>
+          装机知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcDIY/diy/" class="md-nav__link">
+        装机知识
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ACADEMIC/">学术</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          学术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../DEV/">开发</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../WEBSITE/">网站</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          网站
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEBSITE/build/" class="md-nav__link">
+        Build
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEBSITE/help/" class="md-nav__link">
+        文章编写帮助
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEBSITE/test/" class="md-nav__link">
+        测试文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEBSITE/AcadHomepage/" class="md-nav__link">
+        AcadHomepage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ESSAY/">随笔</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ME/">我</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          我
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    标准库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    框架
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    人工智能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    异步事件循环
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    音频
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    生态学
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    比特流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    化学
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    命令行界面
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    压缩
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    并发性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    容器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    密码学
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    CSV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    调试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    字体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    游戏引擎
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    图形用户界面
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    图形
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    图像处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    国际化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    进程间通信
+  </a>
+  
+    <nav class="md-nav" aria-label="进程间通信">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    Json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    日志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    机器学习
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    数学
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    内存分配
+  </a>
+  
+    <nav class="md-nav" aria-label="内存分配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    多媒体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    网络
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf" class="md-nav__link">
+    PDF
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    物理学
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    映射
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    正则表达式
+  </a>
+  
+    <nav class="md-nav" aria-label="正则表达式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    机器人学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    科学计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    序列化
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    排序
+  </a>
+  
+    <nav class="md-nav" aria-label="排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    视频
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    虚拟机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web应用框架
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    XML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    多项混杂
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    软件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    编译器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    在线编译器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    调试器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    集成开发环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    构建系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    静态代码分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    编码样式工具
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+    <a href="https://github.com/zhaozhao626/zhaozhao626.github.io/edit/main/docs/BLOG/C++/C++资源总结.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="c">C++ 资源总结<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
+<h3 id="_1">目录<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#c-资源总结">C++ 资源总结</a><ul>
+<li><a href="#目录">目录</a></li>
+<li><a href="#标准库">标准库</a></li>
+<li><a href="#框架">框架</a></li>
+<li><a href="#人工智能">人工智能</a></li>
+<li><a href="#异步事件循环">异步事件循环</a></li>
+<li><a href="#音频">音频</a></li>
+<li><a href="#生态学">生态学</a></li>
+<li><a href="#比特流">比特流</a></li>
+<li><a href="#化学">化学</a></li>
+<li><a href="#命令行界面">命令行界面</a></li>
+<li><a href="#压缩">压缩</a></li>
+<li><a href="#并发性">并发性</a></li>
+<li><a href="#配置">配置</a></li>
+<li><a href="#容器">容器</a></li>
+<li><a href="#密码学">密码学</a></li>
+<li><a href="#csv">CSV</a></li>
+<li><a href="#数据库">数据库</a></li>
+<li><a href="#调试">调试</a></li>
+<li><a href="#字体">字体</a></li>
+<li><a href="#游戏引擎">游戏引擎</a></li>
+<li><a href="#图形用户界面">图形用户界面</a></li>
+<li><a href="#图形">图形</a></li>
+<li><a href="#图像处理">图像处理</a></li>
+<li><a href="#国际化">国际化</a></li>
+</ul>
+</li>
+<li><a href="#进程间通信">进程间通信</a><ul>
+<li><a href="#json">Json</a></li>
+<li><a href="#日志">日志</a></li>
+<li><a href="#机器学习">机器学习</a></li>
+<li><a href="#数学">数学</a></li>
+</ul>
+</li>
+<li><a href="#内存分配">内存分配</a><ul>
+<li><a href="#多媒体">多媒体</a></li>
+<li><a href="#网络">网络</a></li>
+</ul>
+</li>
+<li><a href="#pdf">PDF</a><ul>
+<li><a href="#物理学">物理学</a></li>
+</ul>
+</li>
+<li><a href="#映射">映射</a></li>
+<li><a href="#正则表达式">正则表达式</a><ul>
+<li><a href="#机器人学">机器人学</a></li>
+<li><a href="#科学计算">科学计算</a></li>
+<li><a href="#脚本">脚本</a></li>
+<li><a href="#序列化">序列化</a></li>
+</ul>
+</li>
+<li><a href="#排序">排序</a><ul>
+<li><a href="#视频">视频</a></li>
+<li><a href="#虚拟机">虚拟机</a></li>
+<li><a href="#web应用框架">Web应用框架</a></li>
+<li><a href="#xml">XML</a></li>
+<li><a href="#多项混杂">多项混杂</a></li>
+<li><a href="#软件">软件</a></li>
+<li><a href="#编译器">编译器</a></li>
+<li><a href="#在线编译器">在线编译器</a></li>
+<li><a href="#调试器">调试器</a></li>
+<li><a href="#集成开发环境">集成开发环境</a></li>
+<li><a href="#构建系统">构建系统</a></li>
+<li><a href="#静态代码分析">静态代码分析</a></li>
+</ul>
+</li>
+<li><a href="#编码样式工具">编码样式工具</a></li>
+</ul>
+<h3 id="_2">标准库<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>C++标准库，包括了STL容器，算法和函数等。</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">C++ Standard Library</a>: 是一系列类和函数的集合，使用核心语言编写，也是C++ISO自身标准的一部分。</li>
+<li><a href="http://en.wikipedia.org/wiki/Standard_Template_Library">Standard Template Library</a>: 标准模板库。</li>
+<li><a href="http://en.wikipedia.org/wiki/C_POSIX_library">C POSIX library</a>:  POSIX系统的C标准库规范。</li>
+<li><a href="https://github.com/cplusplus">ISO C++ Standards Committee</a>: C++标准委员会。</li>
+<li><a href="https://www.gnu.org/software/libc/manual">The GNU C Library</a>: 本手册的目的是告诉你如何使用GNU C库。</li>
+</ul>
+<h3 id="_3">框架<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>C++通用框架和库</p>
+<ul>
+<li>
+<p><a href="https://github.com/abseil/abseil-cpp">abseil-cpp</a>: Abseil C++ 通用库。</p>
+</li>
+<li>
+<p><a href="http://stdcxx.apache.org/">Apache C++ Standard Library</a>: 是一系列算法，容器，迭代器和其他基本组件的集合。</p>
+</li>
+<li><a href="http://apr.apache.org/">APR</a>: Apache可移植运行时库。另一个跨平台的库。</li>
+<li><a href="http://stlab.adobe.com/">ASL</a>: Adobe源代码库提供了同行的评审和可移植的 C++ 源代码库。</li>
+<li><a href="https://github.com/boostorg">Boost</a>: 大量通用 C++ 库的集合。</li>
+<li><a href="https://github.com/bloomberg/bde">BDE</a>: 来自于彭博资讯实验室的开发环境。</li>
+<li><a href="http://libcinder.org/">Cinder</a>: 提供专业品质创造性编码的开源开发社区。</li>
+<li><a href="https://github.com/idealvin/co">CO</a> - C++基础库，包含 go-style 协程库，日志库, JSON库, RPC 框架以及其他基本组件。</li>
+<li><a href="http://ryan.gulix.cl/fossil.cgi/cxxomfort/">Cxxomfort</a>: 轻量级的，只包含头文件的库，将 C++ 11的一些新特性移植到C++03中。</li>
+<li><a href="http://dlib.net/">Dlib</a>: 使用契约式编程和现代 C++ 科技设计的通用的跨平台的 C++ 库。</li>
+<li><a href="https://github.com/paulhodge/EASTL">EASTL</a>: EA-STL公共部分。</li>
+<li><a href="https://github.com/ETLCPP/etl">ETL</a>: 嵌入式模板库。</li>
+<li><a href="https://github.com/sumeetchhetri/ffead-cpp">ffead-cpp</a>: 企业应用程序开发框架。</li>
+<li><a href="https://github.com/facebook/folly">Folly</a>: 由Facebook开发和使用的开源C++库。</li>
+<li><a href="https://github.com/Dobiasd/FunctionalPlus">FunctionalPlus</a>: C++ 的函数式编程库，编写简洁易读的C++代码。</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">GLib</a>: GLib提供用C编写的库和应用的核心代码块。</li>
+<li><a href="https://github.com/julianstorer/JUCE">JUCE</a>: 包罗万象的C++类库，用于开发跨平台软件。</li>
+<li><a href="https://github.com/Kigs-framework/kigs">Kigs framework</a>: C++免费开源的模块化、多功能、跨平台的RAD框架。</li>
+<li><a href="https://github.com/facebook/libphenom">libPhenom</a>: 用于构建高性能和高度可扩展性系统的事件框架。</li>
+<li><a href="https://github.com/sourcey/libsourcey">LibSourcey</a>: 用于实时的视频流和高性能网络应用程序的C++11 evented IO。</li>
+<li><a href="https://github.com/koanlogic/libu">LibU</a>:  C语言写的多平台工具库。</li>
+<li><a href="http://loki-lib.sourceforge.net/">Loki</a>: C++库的设计，包括常见的设计模式和习语的实现。</li>
+<li><a href="https://code.google.com/p/mili/">MiLi</a>: 只含头文件的小型C++库。</li>
+<li><a href="http://www.openframeworks.cc/">openFrameworks</a>: 开发C++工具包，用于创意性编码。</li>
+<li><a href="http://qt-project.org/">Qt</a>: 跨平台的应用程序和用户界面框架。</li>
+<li><a href="http://code.google.com/p/reason/">Reason</a>: 跨平台的框架，使开发者能够更容易地使用Java，.Net和Python，同时也满足了他们对C++性能和优势的需求。</li>
+<li><a href="http://root.cern.ch/">ROOT</a>: 具备所有功能的一系列面向对象的框架，能够非常高效地处理和分析大量的数据，为欧洲原子能研究机构所用。</li>
+<li><a href="http://www.stlport.org/">STLport</a>: 是STL具有代表性的版本。</li>
+<li><a href="http://stxxl.sourceforge.net/">STXXL</a>: 用于额外的大型数据集的标准模板库。</li>
+<li><a href="https://github.com/tboox/tbox">tbox</a>: 类似于glib的多平台C库。</li>
+<li><a href="http://www.ultimatepp.org/">Ultimate++</a>: C++跨平台快速应用程序开发框架。</li>
+<li><a href="http://msharov.github.io/ustl/">uSTL</a>: 小型STL库。</li>
+<li><a href="http://sourceforge.net/projects/wtl/">Windows Template Library</a>: 用于开发Windows应用程序和UI组件的C++库。</li>
+<li><a href="https://github.com/jll63/yomm2">Yomm2</a>: 快速的、正交的、开放的multi-methods，取代<a href="https://github.com/jll63/yomm11">Yomm11</a>。</li>
+</ul>
+<h3 id="_4">人工智能<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="https://github.com/ANNetGPGPU/ANNetGPGPU">ANNetGPGPU</a>: 基于GPU(CUDA)的人工神经网络库。</p>
+</li>
+<li>
+<p><a href="https://github.com/aigamedev/btsk">btsk</a>: 游戏行为树启动器工具。</p>
+</li>
+<li><a href="http://eodev.sourceforge.net/">Evolving Objects</a>: 基于模板的，ANSI C++演化计算库，能够帮助你非常快速地编写出自己的随机优化算法。</li>
+<li><a href="https://github.com/Dobiasd/frugally-deep">frugally-deep</a>: 使用Keras模型的C++库，只有头文件。</li>
+<li><a href="https://github.com/codeplea/genann">Genann</a>: 简单的神经网络C库。</li>
+<li><a href="https://github.com/apache/incubator-mxnet">MXNet</a>: 轻量级、便携、灵活的分布式/移动深度学习，具有动态、可感知突变的数据流管理调度程序。适用于Python、R、Julia、Scala、Go、Javascript和更多网站。</li>
+<li><a href="https://github.com/pytorch/pytorch">PyTorch</a>: 具有强大CPU加速功能，包含张量和动态神经网络的Python库。</li>
+<li><a href="https://github.com/recastnavigation/recastnavigation">Recast/Detour</a>: （3D）导航网格生成器和路径查找，主要用于游戏。</li>
+<li><a href="https://github.com/tensorflow/tensorflow">TensorFlow</a>: 使用数据流图进行数值计算的开源软件库。</li>
+<li><a href="https://github.com/Microsoft/CNTK">CNTK</a>: Microsoft Cognitive Toolkit (CNTK)，开源的深度学习工具库。</li>
+<li><a href="https://github.com/tiny-dnn/tiny-dnn">tiny-dnn</a>: C++11中的无依赖项的深度学习框架，只有头文件。</li>
+<li><a href="https://github.com/Samsung/veles">Veles</a>: 用于快速深度学习应用开发的分布式平台。</li>
+<li><a href="https://github.com/kaldi-asr/kaldi">Kaldi</a>: 语音识别工具包。</li>
+</ul>
+<h3 id="_5">异步事件循环<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="https://github.com/chriskohlhoff/asio/">Asio</a>: 用于网络和底层I/O编程的跨平台 C++ 库，使用现代 C++ 方法为开发者提供一致的异步模型。</p>
+</li>
+<li>
+<p><a href="http://think-async.com/">Boost.Asio</a>: 用于网络和底层I/O编程的跨平台的 C++ 库。</p>
+</li>
+<li><a href="https://github.com/actor-framework/actor-framework">C++ Actor Framework</a>: C++中Actor Model的开源实现。</li>
+<li><a href="http://libev.schmorp.de/">libev</a>: 功能齐全，高性能的时间循环，轻微地仿效libevent，但是不再像libevent一样有局限性，也修复了它的一些bug。</li>
+<li><a href="http://libevent.org/">libevent</a>: 事件通知库。</li>
+<li><a href="https://github.com/ithewei/libhv">libhv</a>: 跨平台的事件循环库。</li>
+<li><a href="https://github.com/joyent/libuv">libuv</a>: 跨平台异步I/O。</li>
+<li><a href="https://github.com/xhawk18/promise-cpp">promise-cpp</a>: 实现Promise/A+标准的库，只有头文件。</li>
+<li><a href="https://github.com/skypjack/uvw">uvw</a>: libuv的C++封装器。</li>
+</ul>
+<h3 id="_6">音频<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>音频，声音，音乐，数字化音乐库</p>
+<ul>
+<li>
+<p><a href="https://github.com/adamstark/AudioFile">AudioFile</a>: 用于读写音频文件的简单C++库。</p>
+</li>
+<li>
+<p><a href="http://www.fmod.org/">FMOD</a>: 易于使用的跨平台的音频引擎和音频内容的游戏创作工具。</p>
+</li>
+<li><a href="https://www.kfrlib.com/">KFR</a>: 快速、现代的C++ DSP框架，FFT、FIR/IIR滤波器，和采样率转换。</li>
+<li><a href="https://lame.sourceforge.io/using.php">LAME</a>: LAME是高质量MPEG音频第三层（MP3）编码器。</li>
+<li><a href="https://github.com/erikd/libsndfile/">libsndfile</a>: C++封装的C库，用于通过标准库接口读写包含采样声音的文件。</li>
+<li><a href="https://github.com/andrewrk/libsoundio">libsoundio</a>: 用于跨平台实时音频输入输出的C库。</li>
+<li><a href="https://github.com/micknoise/Maximilian">Maximilian</a>: C++音频和音乐数字信号处理库。</li>
+<li><a href="http://www.openal.org/">OpenAL</a>: 开源音频库---跨平台的音频API。</li>
+<li><a href="https://github.com/dr-soft/miniaudio">miniaudio</a>: 单文件音频回放和录制的库。</li>
+<li><a href="http://opus-codec.org/">Opus</a>: 一个完全开放的，免版税的，高度通用的音频编解码器。</li>
+<li><a href="http://www.portaudio.com/">PortAudio</a>: 免费的、跨平台的、开源的音频I/O库。</li>
+<li><a href="https://github.com/sahaRatul/sela">SELA</a>: SimplIE无损音频。</li>
+<li><a href="https://github.com/jarikomppa/soloud">SoLoud</a>: 简单便携的游戏音频引擎。</li>
+<li><a href="http://www.speex.org/">Speex</a>: 免费编解码器，为Opus所废弃。</li>
+<li><a href="https://github.com/TonicAudio/Tonic">Tonic</a>: C++易用和高效的音频合成。</li>
+<li><a href="http://xiph.org/vorbis/">Vorbis</a>: Ogg Vorbis是一种完全开放的，非专有的，免版税的通用压缩音频格式。</li>
+<li><a href="https://github.com/lieff/minimp3">minimp3</a>: 公共域，无尘室实现的MP3解码器，只有头文件。</li>
+<li><a href="https://github.com/rism-ch/verovio">Verovio</a>: 快速、轻量级的音乐符号雕刻库。</li>
+<li><a href="https://github.com/facebookresearch/wav2letter/">Wav2Letter++</a>: 公共域，完全用C++编写的快速开放源代码的语音处理库，同时使用ArrayFire张量库和flashlight机器学习库来实现最高的效率。</li>
+</ul>
+<h3 id="_7">生态学<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>生物信息，基因组学和生物技术</p>
+<ul>
+<li><a href="http://biocpp.sourceforge.net/">BioC++</a>: 生物信息学的C++计算库。</li>
+<li>
+<p><a href="http://www.cs.ox.ac.uk/chaste/">Chaste</a>: 开放源代码的C++库，用于为生理学和生物学开发的数学模型的计算仿真。</p>
+</li>
+<li>
+<p><a href="http://molpopgen.github.io/libsequence/">libsequence</a>: 用于表示和分析群体遗传学数据的C++库。</p>
+</li>
+<li><a href="http://www.seqan.de/">SeqAn</a>: 专注于生物数据序列分析的算法和数据结构。</li>
+<li><a href="https://github.com/ekg/vcflib">Vcflib</a>: 用于解析和处理VCF文件的C++库。</li>
+<li><a href="https://github.com/jewmanchue/wham">Wham</a>: 直接把联想测试应用到BAM文件的基因结构变异。</li>
+</ul>
+<h3 id="_8">比特流<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/jech/dht">jech/dht</a>: C实现的比特流分布式哈希表库。</li>
+<li><a href="https://github.com/arvidn/libtorrent">libtorrent</a>(a.k.a. libtorrent-rasterbar): 高效的、功能完整的C++比特流实现。</li>
+<li><a href="https://github.com/rakshasa/libtorrent">LibTorrent</a> (a.k.a. libtorrent-rakshasa): 比特流库。</li>
+<li><a href="https://github.com/bittorrent/libutp">libutp</a>: uTorrent传输协议库。</li>
+</ul>
+<h3 id="_9">化学<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>化学，地球化学，生物化学</p>
+<ul>
+<li><a href="https://github.com/d-SEAMS/seams-core">d-SEAMS</a>: 具有Nix的C++和Lua实现的分子动力学轨道分析引擎，它是分子模拟的递延结构分析的首字母缩写。</li>
+<li><a href="https://github.com/gromacs/gromacs">gromacs</a>: 传递消息的并行分子动力学实现。</li>
+<li><a href="https://github.com/reaktoro/reaktoro">Reaktoro</a>: C++和python中用于对化学反应系统进行建模的计算框架。</li>
+<li><a href="https://github.com/lammps/lammps">LAMMPS</a>: 经典的用于材料建模的分子动力学代码，它是大范围原子/分子巨量平行模拟器的首字母缩写。</li>
+</ul>
+<h3 id="_10">命令行界面<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>控制台/终端用户界面，命令行界面</p>
+<ul>
+<li><a href="https://github.com/adishavit/argh">Argh!</a>: 极简的只有头文件的参数处理程序。</li>
+<li><a href="https://github.com/taywee/args">Taywee / args</a>: 简单的只有头文件的C++参数解析库。</li>
+<li><a href="http://www.boost.org/doc/libs/1_57_0/doc/html/program_options.html">Boost.Program_options</a>: 通过常见的方法，例如命令行和配置文件，来获取程序选择项的库。</li>
+<li><a href="https://github.com/catchorg/Clara">Clara</a>: 用于C++11及更高版本的易于使用、可组合的命令行解析器。</li>
+<li><a href="https://github.com/daniele77/cli">cli</a>: 用于交互式命令行界面的跨平台的C++14库，只有头文件。</li>
+<li><a href="https://github.com/CLIUtils/CLI11">CLI11</a>: 单文件或多文件的C++11库，用于简单和高级的CLI解析，只有头文件。</li>
+<li><a href="https://github.com/jarro2783/cxxopts">jarro2783/cxxopts</a>: 轻量级的C++命令行选项解析器。</li>
+<li><a href="https://github.com/docopt/docopt.cpp">docopt.cpp</a>: 从文档字符串生成选项解析的库。</li>
+<li><a href="https://gflags.github.io/gflags/">gflags</a>: C++的命令行标志模块。</li>
+<li><a href="https://github.com/p-ranav/indicators/">indicators</a>: 现代C++的活动指标。</li>
+<li><a href="https://github.com/antirez/linenoise">linenoise</a>: readline和libedit的独立小选择。</li>
+<li><a href="https://github.com/arangodb/linenoise-ng">linenoise-ng</a>: 用于Linux、Windows和MacOS的小型便携式GNU readline替换，它能够处理UTF-8字符。</li>
+<li><a href="https://github.com/bfgroup/Lyra">Lyra</a>: 易于使用的、可组合的命令行解析器，适用于C++11及更高版本。</li>
+<li><a href="http://invisible-island.net/ncurses/">Ncurses</a>: 终端用户界面。</li>
+<li><a href="https://github.com/wmcbrine/PDCurses">PDCurses</a>: 具有源代码和预编译库的公共域curses库。</li>
+<li><a href="https://github.com/AmokHuginnsson/replxx">replxx</a>: 支持UTF-8、语法高亮、提示的readline和libedit替换，可在Unix和Windows上工作。</li>
+<li><a href="https://github.com/p-ranav/tabulate">tabulate</a>: 现代C++的表格制作工具。</li>
+<li><a href="http://tclap.sourceforge.net/">TCLAP</a>: 用于在ANSI C++中定义和访问命令行参数的成熟、稳定、功能多样的库。</li>
+<li><a href="https://github.com/nsf/termbox">termbox</a>: 用于编写基于文本的用户界面的C库。</li>
+</ul>
+<h3 id="_11">压缩<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>压缩和归档库</p>
+<ul>
+<li><a href="https://github.com/rikyoz/bit7z">bit7z</a>: C++静态库，提供与7-zip DLLs的简洁接口。</li>
+<li>
+<p><a href="https://github.com/google/brotli">Brotli</a>: Brotli压缩格式，由Google开发。</p>
+</li>
+<li>
+<p><a href="http://www.bzip.org/">bzip2</a>: 一个完全免费，免费专利和高质量的数据压缩。</p>
+</li>
+<li><a href="https://github.com/Cyan4973/FiniteStateEntropy">FiniteStateEntropy</a>: 新一代熵编解码器: 有限状态熵和Huff()。</li>
+<li><a href="https://icculus.org/physfs/">PhysicsFS</a>: 对各种归档提供抽象访问的库，主要用于视频游戏，设计灵感部分来自于Quake3的文件子系统。</li>
+<li><a href="https://projects.kde.org/projects/frameworks/karchive">KArchive</a>: 用于创建，读写和操作文件档案（例如zip和 tar）的库，它通过QIODevice的一系列子类，使用gzip格式，提供了透明的压缩和解压缩的数据。</li>
+<li><a href="https://github.com/libarchive/libarchive">libarchive</a>: 多格式的存档和压缩库。</li>
+<li><a href="https://code.google.com/p/lz4/">LZ4</a>: 非常快速的压缩算法。</li>
+<li><a href="https://github.com/lzfse/lzfse">LZFSE</a>: LZFSE压缩库和命令行工具。</li>
+<li><a href="https://code.google.com/p/lzham/">LZHAM</a>: 无损压缩数据库，压缩比率跟LZMA接近，但是解压缩速度却要快得多。</li>
+<li><a href="http://www.7-zip.org/sdk.html">LZMA</a>: 7z格式默认和通用的压缩方法。</li>
+<li><a href="http://www.matcode.com/lzmat.htm">LZMAT</a>: 极其快速的实时无损数据压缩库。</li>
+<li><a href="https://code.google.com/p/miniz/">miniz</a>: 单一的C源文件，紧缩/膨胀压缩库，使用zlib兼容API，ZIP归档读写，PNG写方式。</li>
+<li><a href="https://github.com/nmoinvaz/minizip">Minizip</a>: Zlib最新bug修复，支持PKWARE磁盘跨越，AES加密和IO缓冲。</li>
+<li><a href="https://github.com/antirez/smaz">smaz</a>: 小型字符压缩库。</li>
+<li><a href="https://code.google.com/p/snappy/">Snappy</a>: 快速压缩和解压缩。</li>
+<li><a href="http://zlib.net/">ZLib</a>: 非常紧凑的数据流压缩库。</li>
+<li><a href="https://github.com/Dead2/zlib-ng">zlib-ng</a>: 用于“下一代”系统的zlib，将一些重要的优化进行嵌入式替换。</li>
+<li><a href="https://github.com/facebook/zstd">zstd</a>: Zstandard-快速实时压缩算法。由Facebook开发。</li>
+<li><a href="http://zziplib.sourceforge.net/">ZZIPlib</a>: 提供ZIP归档的读权限。</li>
+</ul>
+<h3 id="_12">并发性<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>并发执行和多线程</p>
+<ul>
+<li><a href="https://github.com/ComputationalRadiationPhysics/alpaka">alpaka</a>: 并行内核加速的抽象库。</li>
+<li><a href="https://github.com/arrayfire/arrayfire">ArrayFire</a>: 通用GPU库。</li>
+<li>
+<p><a href="https://github.com/Amanieu/asyncplusplus">Async++</a>: C++ 11 的轻量级并行框架，受Microsoft PPL库和N3428 C++标准提案启发。</p>
+</li>
+<li>
+<p><a href="https://github.com/kylelutz/compute">Boost.Compute</a>: 用于OpenCL的C++GPU计算库。</p>
+</li>
+<li><a href="https://github.com/HSA-Libraries/Bolt">Bolt</a>: 针对GPU进行优化的C++模板库。</li>
+<li><a href="https://github.com/concurrencykit/ck">ck</a>: 并发基元，安全内存回收机制和非阻塞数据结构。</li>
+<li><a href="https://github.com/cameron314/concurrentqueue">concurrentqueue</a>: C++11的快速多生产者、多消费者的无锁并发队列。</li>
+<li><a href="https://github.com/cpp-taskflow/cpp-taskflow">Cpp-Taskflow</a>: 具有任务依赖性的快速C++并行编程。</li>
+<li><a href="https://github.com/NVlabs/cub">CUB</a>: CUB为CUDA编程模式的每一层提供了最新的可重用软件组件。</li>
+<li><a href="https://github.com/eyalroz/cuda-api-wrappers">cuda-api-wrappers</a>: 轻量级的现代C++封装器，用于CUDA GPU的运行时API编程。</li>
+<li><a href="https://github.com/ComputationalRadiationPhysics/cupla">cupla</a>: 通过Alpaka在OpenMPA、线程、TBB……运行CUDA/C++的C++ API。</li>
+<li><a href="https://github.com/schlangster/cpp.react">C++React</a>: 用于C++11的反应性编程库。</li>
+<li><a href="https://github.com/RichieSams/FiberTaskingLib">FiberTaskingLib</a>: 基于任务的多线程库，支持具有任意依赖关系的任务图表。</li>
+<li><a href="https://github.com/STEllAR-GROUP/hpx/">HPX</a>: 适用于任何规模的并行分布式应用的通用C++运行时系统。</li>
+<li><a href="https://github.com/GameTechDev/GTS-GamesTaskScheduler">Intel Games Task Scheduler</a>: 为了游戏开发者的需要而设计的任务调度框架。</li>
+<li><a href="https://github.com/intel/parallelstl">Intel Parallel STL</a>: C++ 17 STL的英特尔实现，适用于C++11及更高版本。</li>
+<li><a href="https://www.threadingbuildingblocks.org/">Intel TBB</a>: 英特尔线程构建模块。</li>
+<li><a href="https://github.com/preshing/junction">junction</a>: 并发数据结构的C++库。</li>
+<li><a href="https://github.com/kokkos/kokkos">Kokkos</a>: 用于并行运行和内存抽象的便携式编程模型。</li>
+<li><a href="https://github.com/khizmax/libcds">libcds</a>: 并行数据结构的C++库。</li>
+<li><a href="https://github.com/libclsph/libclsph">Libclsph</a>: 基于OpenCL的GPU加速SPH流体仿真库。</li>
+<li><a href="https://github.com/sustrik/libmill/">libmill</a>: 在C中引入结构并发性。</li>
+<li><a href="https://github.com/apple/swift-corelibs-libdispatch">libdispatch</a>: Apple公司开发的Grand Central Dispatch（GCD）是基于线程池模式的任务并行技术。libdispatch库提供了GCD服务的实现。</li>
+<li><a href="https://github.com/sustrik/libmill/">libmill</a>: 在C中引入Go-style并发性。</li>
+<li><a href="https://github.com/google/marl">marl</a>: Marl是用C++11编写的混合线程/纤程的任务调度程序。</li>
+<li><a href="https://github.com/moderngpu/moderngpu">moderngpu</a>: moderngpu是用于GPUs通用计算的生产力库，它只有为CUDA编写的C++头文件。该库的独特价值在于其用于解决不规则并行问题的加速基元。</li>
+<li><a href="https://github.com/NVIDIA/nccl">NCCL</a>: 用于集体多GPU通信的优化基元。</li>
+<li><a href="https://www.khronos.org/opencl/">OpenCL</a>: 并行编程的异构系统的开放标准。</li>
+<li><a href="http://openmp.org/">OpenMP</a>: OpenMP API。</li>
+<li><a href="https://github.com/Stiffstream/sobjectizer">SObjectizer</a>: 实现Actor、Publish-Subscribe和CSP模式的相当小的C++框架。</li>
+<li><a href="https://github.com/bloomberg/quantum">Quantum</a>: 建立在<a href="https://www.boost.org/doc/libs/1_65_0/libs/coroutine2/doc/html/index.html">boost::coroutines2</a>顶层的强大的C++协同调度程序框架。</li>
+<li><a href="http://raftlib.io/">RaftLib</a>: RaftLib C++ 库，通过类似iostream的 C++ 运算符实现流/数据流并发性。</li>
+<li><a href="https://github.com/cameron314/readerwriterqueue">readerwriterqueue</a>: C++的快速单生产者、单消费者的无锁队列。</li>
+<li><a href="https://github.com/stotko/stdgpu">stdgpu</a>: GPU上高效的类似STL的数据结构。</li>
+<li><a href="http://thrust.github.io/">Thrust</a>: 类似于C++标准模板库的并行算法库。</li>
+<li><a href="https://github.com/bloomen/transwarp">transwarp</a>: 任务并发性的C++库，只有头文件。</li>
+<li><a href="https://github.com/ddemidov/vexcl">VexCL</a>: 用于OpenCL/CUDA 的C++向量表达式模板库。</li>
+<li><a href="https://github.com/bloomberg/quantum">Quantum</a>: 建立在<a href="https://www.boost.org/doc/libs/1_65_0/libs/coroutine2/doc/html/index.html">boost::coroutines2</a>顶层的强大的C++协同调度程序框架。</li>
+<li><a href="http://parasol-lab.gitlab.io/stapl-home/">STAPL</a>: C++并行编程框架，旨在工作在共享和分布式内存并行电脑上。</li>
+</ul>
+<h3 id="_13">配置<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>配置文件，INI文件</p>
+<ul>
+<li>
+<p><a href="https://github.com/benhoyt/inih">inih</a>: C语言的简单.INI文件解析器，很适合嵌入式系统。</p>
+</li>
+<li>
+<p><a href="https://github.com/jtilly/inih">inih</a>: <a href="https://github.com/benhoyt/inih">inih</a>的C++版本，只有头文件。</p>
+</li>
+<li><a href="https://github.com/ndevilla/iniparser">iniparser</a>: INI文件解析器。</li>
+<li><a href="https://github.com/hyperrealm/libconfig">libconfig</a>: 用于处理结构化配置文件的C、C++库。</li>
+<li><a href="https://github.com/martinh/libconfuse">libconfuse</a>: C的小型配置文件解析库。</li>
+<li><a href="https://github.com/brofield/simpleini">simpleini</a>: 跨平台的C++库，提供用于读写INI配置文件的简单API。</li>
+<li><a href="https://github.com/marzer/tomlplusplus">toml++</a>: TOML解析器和串化器，适用于C++17及更高版本，只有头文件。</li>
+</ul>
+<h3 id="_14">容器<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://code.google.com/p/cpp-btree/">C++ B-tree</a>: 基于B树数据结构，实现命令内存容器的模板库。</li>
+<li><a href="https://github.com/mattreecebentley/plf_colony">Colony</a>: 无序的”bag“型容器，在高度修改的情况下，其性能优于标准容器。同时，无论插入还是擦除，其都能始终保持指向未擦除元素的永久指针。</li>
+<li><a href="https://github.com/pinam45/dynamic_bitset">dynamic_bitset</a>: C++17 的动态位集合，只有头文件。</li>
+<li><a href="https://github.com/xorz57/forest">Forest</a>: 实现了AVL、二进制搜索、KD和四叉树的模板库。</li>
+<li><a href="https://github.com/goossaert/hashmap">Hashmaps</a>: C++中开放寻址哈希表算法的实现。</li>
+<li><a href="https://github.com/Tessil/hopscotch-map">Hopscotch map</a>: 使用hopscotch哈希算法来实现冲突解决的快速哈希映射，只有头文件。</li>
+<li><a href="https://github.com/RSIA-LIESMARS-WHU/LSHBOX">LSHBOX</a>: 局部敏感算法（LSH）的C++工具箱，提供了好几种普遍的LSH算法，也可以支持Python和MATLAB。</li>
+<li><a href="https://github.com/gvinciguerra/PGM-index">PGM-index</a>: 能够快速查找、前导、范围搜索和更新数以亿计项数组的数据结构，其跟传统索引相比，使用梯度的顺序而不是空间。</li>
+<li><a href="https://github.com/mattreecebentley/plf_list">plf::list</a>: std::list实现，其清除范围拼接以启用缓存友好的结构，从而显著提高性能。</li>
+<li><a href="https://github.com/mattreecebentley/plf_stack">plf::stack</a>: std::stack容器适配器的替换容器，其在堆栈上下文中比任何标准容器都有更好的性能。</li>
+<li><a href="https://github.com/martinmoene/ring-span-lite">ring_span lite</a>: Arthur O'Dwyer的ring_span的简化实现，例如循环缓冲视图。</li>
+<li><a href="https://github.com/martinus/robin-hood-hashing">robin-hood-hashing</a>: 用于C++1的快速、节约内存的哈希表，基于robin hood哈希算法。</li>
+<li><a href="https://github.com/Tessil/robin-map">robin-map</a>: 使用robin hood哈希算法的哈希映射和哈希集。</li>
+<li><a href="https://github.com/greg7mdp/sparsepp">sparsepp</a>: 用于C++的快速、节约内存的哈希映射。</li>
+</ul>
+<h3 id="_15">密码学<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>密码学和加密库</p>
+<ul>
+<li><a href="http://bcrypt.sourceforge.net/">Bcrypt</a>: 一个跨平台的文件加密工具，加密文件可以移植到所有可支持的操作系统和处理器中。</li>
+<li><a href="https://github.com/fffaraz/awesome-cpp/blob/master">BeeCrypt</a>: 可移植和快速的加密库。</li>
+<li><a href="http://botan.randombit.net/">Botan</a>: C++加密库。</li>
+<li><a href="http://www.cryptopp.com/">Crypto++</a>: 一个有关加密方案的免费的C++库。</li>
+<li><a href="https://github.com/kerukuro/digestpp">digestpp</a>: C++11的信息摘要（哈希）库，只有头文件。</li>
+<li><a href="https://www.gnupg.org/">GnuPG</a>: OpenPGP标准的完整和免费实现。</li>
+<li><a href="http://www.gnutls.org/">GnuTLS</a>: 实现了SSL，TLS和DTLS协议的安全通信库。</li>
+<li><a href="http://www.gnu.org/software/libgcrypt/">Libgcrypt</a>: 通用的密码库，最初基于CnuPG的代码。</li>
+<li><a href="http://www.libressl.org/">LibreSSL</a>: 免费的SSL/TLS协议，属于2014 OpenSSL的一个分支。</li>
+<li><a href="https://github.com/jedisct1/libsodium">libsodium</a>: 基于NaCI的加密库，固执己见，容易使用。</li>
+<li><a href="https://github.com/jedisct1/libhydrogen">libhydrogen</a>: 轻量级、安全、易于使用的加密库，适用于受限的环境。</li>
+<li><a href="https://github.com/libtom/libtomcrypt">LibTomCrypt</a>: 相当全面、模块化和可移植的加密工具包。</li>
+<li><a href="https://github.com/ARMmbed/mbedtls">mbedTLS</a>: 开源的、可移植的、易于使用的、可读的、灵活的SSL库，以前被称为PolarSSL。</li>
+<li><a href="http://www.lysator.liu.se/~nisse/nettle/">Nettle</a> 底层的加密库。</li>
+<li><a href="http://www.openssl.org/">OpenSSL</a>:  一个健壮的，商用的，功能齐全的，开源的加密库。</li>
+<li><a href="https://github.com/MaciejCzyzewski/retter">retter</a>: 与哈希函数、密码、工具、库和材料相关的密码学集合。</li>
+<li><a href="https://github.com/awslabs/s2n">s2n</a>: TLS/SSL协议的实现。</li>
+<li><a href="https://github.com/cr-marcstevens/sha1collisiondetection">sha1collisiondetection</a>: 用于检测文件中SHA-1冲突的库和命令行工具。</li>
+<li><a href="https://github.com/google/tink">Tink</a>: 多语言、跨平台的库，提供安全、易于正确使用且难以滥用的加密API。</li>
+<li><a href="https://github.com/kokke/tiny-AES-c">Tiny AES in C</a>: C中小型可移植的AES128/192/256。</li>
+<li><a href="https://github.com/cossacklabs/themis">Themis</a>: 用于无痛数据安全的加密库，为移动和服务器平台提供对称和非对称加密，具有向前保密性的安全套接字。</li>
+</ul>
+<h3 id="csv">CSV<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
+<p>用于解析逗号分隔值（CSV）文件的库</p>
+<ul>
+<li><a href="https://github.com/p-ranav/csv2">csv2</a>: 现代C++的快速CSV解析器。</li>
+<li><a href="https://github.com/ben-strasser/fast-cpp-csv-parser">Fast C++ CSV Parser</a>: 用于读取CSV文件的小型、易于使用和快速的库，只包含头文件。</li>
+<li><a href="https://github.com/vincentlaucsb/csv-parser">Vince's CSV Parser</a>: 快速、独立、流式的C++17 CSV解析器，具有可选的类型转换和统计信息。</li>
+</ul>
+<h3 id="_16">数据库<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>数据库，SQL服务器，ODBC驱动程序和工具</p>
+<ul>
+<li><a href="https://github.com/paulftw/hiberlite">hiberlite</a>: 用于Sqlite3的C++对象关系映射。</li>
+<li><a href="https://github.com/redis/hiredis">Hiredis</a>: 用于Redis数据库的很简单的C客户端库。</li>
+<li><a href="https://github.com/google/leveldb">LevelDB</a>: 由Google编写的快速键值存储库，提供了从字符键到字符串值的有序映射。</li>
+<li><a href="http://symas.com/mdb/">LMDB</a>: 符合数据库四大基本元素的嵌入键值存储。</li>
+<li><a href="https://github.com/bendiken/lmdbxx">LMDB++</a>: LMDB嵌入式数据库的C++11封装器。</li>
+<li><a href="https://github.com/mongodb/mongo-c-driver">MongoDB C Driver</a>: C的MongoDB客户端库。</li>
+<li><a href="https://github.com/mongodb/mongo-cxx-driver">MongoDB C++ Driver</a>: MongDB的C++驱动程序。</li>
+<li><a href="https://github.com/mongodb/libbson">MongoDB Libbson</a>: BSON实用库。</li>
+<li><a href="http://www.tangentsoft.net/mysql++/">MySQL++</a>: 封装了MySql的C API的C++ 封装器。</li>
+<li><a href="https://github.com/nanodbc/nanodbc">nanodbc</a>: 用于本机C ODBC API的小型C++封装器。</li>
+<li><a href="https://www.codesynthesis.com/products/odb/">ODB</a>: C++的开源、跨平台、跨数据库的对象关系映射（ORM）系统。</li>
+<li><a href="https://github.com/luca3m/redis3m">redis3m</a>: 使用干净C++接口的hiredis封装器，支持标记和现成的模式。</li>
+<li><a href="https://github.com/facebook/rocksdb">RocksDB</a>: 来自Facebook的嵌入键值的快速存储。</li>
+<li><a href="https://github.com/LiveAsynchronousVisualizedArchitecture/simdb">SimDB</a>: 高性能、共享内存、无锁、跨平台、单文件、最小依赖的C++11键值存储。</li>
+<li><a href="https://github.com/SOCI/soci">SOCI</a>: C++的数据库抽象层。</li>
+<li><a href="http://www.sqlite.org/">SQLite</a>: 一个完全嵌入式的，功能齐全的关系数据库，只有几百KB，可以正确包含到你的项目中。</li>
+<li><a href="https://github.com/SRombauts/SQLiteCpp">SQLiteC++</a>: SQLiteC++ (SQLiteCpp)是聪明且易于使用的C++ SQLite3封装器。</li>
+<li><a href="https://github.com/SqliteModernCpp/sqlite_modern_cpp">sqlite_modern_cpp</a>: sqlite库的C++14封装器，只有头文件。</li>
+<li><a href="https://github.com/fnc12/sqlite_orm">sqlite_orm</a>: 适用于现代C++的SQLite ORM轻量库，只有头文件。</li>
+<li><a href="https://github.com/rbock/sqlpp11">sqlpp11</a>: 用于SQL查询和在C++产生结果的类型安全的嵌入式域特定语言。</li>
+<li><a href="https://github.com/TileDB-Inc/TileDB">TileDB</a>: 快速密集和稀疏多维数组DBMS。</li>
+<li><a href="https://github.com/symisc/unqlite">UnQLite</a>: 独立、无服务器、零配置的事物型NoSQL引擎。</li>
+<li><a href="https://upscaledb.com/">upscaledb</a>: 具有内置查询接口的嵌入式“typed”键值存储。</li>
+</ul>
+<h3 id="_17">调试<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>调试库， 内存和资源泄露检测，单元测试</p>
+<ul>
+<li><a href="https://github.com/bombela/backward-cpp">backward-cpp</a>: C++的漂亮堆栈轨迹打印机。</li>
+<li><a href="https://github.com/google/benchmark">benchmark</a>: Google提供的小型微基准支持库。</li>
+<li><a href="http://www.boost.org/doc/libs/master/libs/test/doc/html/index.html">Boost.Test</a>: Boost测试库。</li>
+<li><a href="https://github.com/libcheck/check">check</a>: C的单元测试框架。</li>
+<li><a href="https://github.com/onqtam/doctest">doctest</a>: 功能最轻便的单个C++头文件的测试框架。</li>
+<li><a href="https://github.com/philsquared/Catch">Catch</a>: 一个很时尚的，C++原生的框架，只包含头文件，用于单元测试，测试驱动开发和行为驱动开发。</li>
+<li><a href="https://github.com/catchorg/Catch2">Catch2</a>: 一个很时尚的，C++原生的框架，只包含头文件，用于单元测试，测试驱动开发和行为驱动开发。</li>
+<li><a href="https://github.com/DigitalInBlue/Celero">Celero</a>: C++基准测试框架。</li>
+<li><a href="https://github.com/cpputest/cpputest">CppUTest</a>: C/C++的单元测试和模拟框架。</li>
+<li><a href="http://cute-test.com/">CUTE</a>: 更容易的C++单元测试。</li>
+<li><a href="https://cmocka.org/">CMocka</a>: 支持模拟对象的C单元测试框架。</li>
+<li><a href="http://www.freedesktop.org/wiki/Software/cppunit/">CppUnit</a>: 由JUnit移植过来的C++测试框架。</li>
+<li><a href="http://www.cmake.org/cmake/help/v2.8.8/ctest.html">CTest</a>: CMake测试驱动程序。</li>
+<li><a href="https://github.com/sharkdp/dbg-macro">dbg-macro</a>: C++的dbg（……）宏。</li>
+<li><a href="http://www.deleaker.com/">Deleaker</a>: 用于资源泄露检查的工具，包括内存、GDI和处理泄露。</li>
+<li><a href="https://github.com/meekrosoft/fff">fff</a>: 创建伪C函数的微框架。</li>
+<li><a href="https://github.com/google/googletest/blob/master/googlemock/README.md">Google Mock</a>: 编写和使用C++模拟类的库。</li>
+<li><a href="https://github.com/google/googletest">Google Test</a>: Google的C++测试框架。</li>
+<li><a href="https://github.com/deplinenoise/ig-debugheap">ig-debugheap</a>: 用于追踪内存错误的多平台调试堆。</li>
+<li><a href="https://github.com/zorgnax/libtap">libtap</a>: 用C语言编写测试。</li>
+<li><a href="http://www.almostinfinite.com/memtrack.html">MemTrack</a>: 用于C++跟踪内存分配。</li>
+<li><a href="https://bitbucket.org/jonasmeyer/microprofile/overview">microprofile</a>: 跨平台的网络视图分析器。</li>
+<li><a href="http://www.jera.com/techinfo/jtns/jtn002.html">minUnit</a>: 使用C写的最小的单元测试框架，包含在单个头文件中。</li>
+<li><a href="http://www.mockator.com/">Mockator</a>: 用于C++缝合和模拟对象的Eclipse CDT插件。</li>
+<li><a href="https://github.com/mattreecebentley/plf_nanotimer">Nanotimer</a>: 用于基准测试的简单、低开销、跨平台的定时器类。</li>
+<li><a href="https://github.com/libnonius/nonius">Nonius</a>: C++微基准测试框架。</li>
+<li><a href="https://github.com/Celtoys/Remotery">Remotery</a>: 用于Web视图的单一C文件分析器。</li>
+<li><a href="http://unittest-cpp.sourceforge.net/">UnitTest++</a>: 轻量级的C++单元测试框架。</li>
+<li><a href="https://github.com/ThrowTheSwitch/Unity">Unity</a>: C的简单单元测试。</li>
+<li><a href="https://github.com/sheredom/utest.h">utest.h</a>: C和C++的单个头文件测试框架。</li>
+<li><a href="https://github.com/boost-experimental/ut">μt</a>: C++20的单头文件/单模块、无宏的μ（微型）/单元测试框架。</li>
+<li><a href="http://vld.codeplex.com/">VLD</a>: 微软测漏仪，Visual C++的免费、健壮、开源的内存泄漏检测系统。</li>
+</ul>
+<h3 id="_18">字体<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>解析和处理字体文件的库。</p>
+<ul>
+<li><a href="https://gitlab.freedesktop.org/fontconfig/fontconfig">Fontconfig</a>: 字体配置和自定义库。</li>
+<li><a href="https://www.freetype.org/">FreeType</a>: 用于渲染字体的免费、可获得的软件库。</li>
+<li><a href="https://github.com/caryll/otfcc">otfcc</a>: 用于解析和编写OpenType字体文件的C库和实用程序。</li>
+</ul>
+<h3 id="_19">游戏引擎<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/Equilibrium-Games/Acid">Acid</a>: 高速的C++17 Vulkan游戏引擎。</li>
+<li><a href="http://liballeg.org/">Allegro</a>: 主要用于视频游戏和多媒体编程的跨平台库。</li>
+<li><a href="http://www.cocos2d-x.org/">Cocos2d-x</a>: 用于构建2D游戏、交互式书籍、演示和其它图形应用程序的多平台框架。</li>
+<li><a href="https://github.com/orangeduck/Corange">Corange</a>: 用纯C、SDL、OpenGL编写的游戏引擎。</li>
+<li><a href="https://github.com/dbartolini/crown">Crown</a>: Crown是一款通用的数据驱动游戏引擎，使用正统C++从零开始编写，并牢记简约和面向数据的设计理念。</li>
+<li><a href="http://sourceforge.net/projects/delta3d/">delta3d</a>: 健壮的仿真平台。</li>
+<li><a href="https://github.com/skypjack/entt">EnTT</a>: 游戏与现代C++的碰撞。</li>
+<li><a href="https://github.com/gameplay3d/GamePlay">GamePlay</a>: 用于创建2D/3D移动和桌面游戏的跨平台本机C++游戏框架。</li>
+<li><a href="https://github.com/godotengine/godot">Godot</a>: 功能齐全、开源、有MIT许可的游戏引擎。</li>
+<li><a href="http://gritengine.com/">Grit</a>: 社区项目，用于构建一个免费的游戏引擎，实现开放的世界3D游戏。</li>
+<li><a href="https://github.com/amzeratul/halley">Halley</a>: 用C++14编写的轻量级游戏引擎，带有“真实的”实体组件系统。</li>
+<li><a href="https://github.com/gongminmin/KlayGE">KlayGE</a>: 具有基于插件架构的跨平台、开源的游戏引擎。</li>
+<li><a href="https://github.com/nCine/nCine">nCine</a>: 注重性能的跨平台2D游戏引擎，用C++11编写，还可以选择使用Lua编写脚本。</li>
+<li><a href="https://github.com/OpenXRay/xray-16">OpenXRay</a>: 在S.T.A.L.K.E.R.游戏系列中使用的社群修改的X射线引擎。</li>
+<li><a href="http://oxygine.org/">Oxygine</a>: 跨平台的2D C++游戏引擎。</li>
+<li><a href="https://github.com/panda3d/panda3d">Panda3D</a>: 游戏引擎，用于Python和C++程序的3D渲染和游戏开发的框架。</li>
+<li><a href="https://github.com/OneLoneCoder/olcPixelGameEngine">PixelGameEngine</a>: olcPixelGameEngine的官方发行版，该工具用于javidx9的YouTube视频和项目。</li>
+<li><a href="http://polycode.org/">Polycode</a>: C++实现的用于创建游戏的开源框架（与Lua绑定）。</li>
+<li><a href="https://github.com/raysan5/raylib">raylib</a>: 简单、易于使用的库，用于享受视频游戏编程的乐趣。</li>
+<li><a href="https://github.com/spring/spring">Spring</a>: 强大、免费、跨平台的RTS游戏引擎。</li>
+<li><a href="https://github.com/GarageGames/Torque2D">Torque2D</a>: 为2D游戏开发构建的开源、跨平台C++引擎。</li>
+<li><a href="https://github.com/GarageGames/Torque3D">Torque3D</a>: 为3D游戏开发构建的开源C++引擎。</li>
+<li><a href="https://github.com/hugoam/toy">toy engine</a>: toy是一个轻量的模块化的 C++ 游戏引擎，并提供简单的、有表现力的C++惯用法来快速迭代设计功能齐全的2D和3D游戏。</li>
+<li><a href="https://urho3d.github.io/">Urho3D</a>: C++实现的免费、轻量级、跨平台的2D和3D游戏引擎，受到OGRE和Horde3D很大的启发。</li>
+</ul>
+<h3 id="_20">图形用户界面<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>图形用户界面</p>
+<ul>
+<li><a href="https://github.com/AshampooSystems/boden">Boden</a>: 本机、移动、跨平台的GUI框架。</li>
+<li><a href="http://cegui.org.uk/">CEGUI</a>:  灵活的跨平台GUI库。</li>
+<li><a href="https://github.com/cycfi/elements">Elements</a>: 轻量级、细粒度、分辨率无关的模块化GUI库。</li>
+<li><a href="http://www.fltk.org/index.php">FLTK</a>: 快速，轻量级的跨平台的C++GUI工具包。</li>
+<li><a href="https://github.com/vczh-libraries/GacUI">GacUI</a>: GPU加速的C++用户界面，具有所见即所得的开发工具，支持XML，具有内置数据绑定和MVVM功能。</li>
+<li><a href="http://www.gtk.org/">GTK+</a>: 用于创建图形用户界面的多平台工具包。</li>
+<li><a href="http://www.gtkmm.org/en/">gtkmm</a>: 用于受欢迎的GUI库GTK+的官方C++接口。</li>
+<li><a href="https://github.com/ocornut/imgui">imgui</a>: 拥有最小依赖关系的即时模式图形用户界面。</li>
+<li><a href="https://github.com/epezent/implot">implot</a>: imgui的即时模式绘图控件。</li>
+<li><a href="https://www.tecgraf.puc-rio.br/iup">iup</a>: 构建图形用户界面的多平台工具包。</li>
+<li><a href="https://github.com/andlabs/libui">libui</a>: C中简单、可移植（但是不灵活）的GUI库，使用其支持的每一种平台的本机GUI技术。</li>
+<li><a href="http://mygui.info/">MyGUI</a>: 快速，灵活，简单的GUI。</li>
+<li><a href="http://nanapro.org/en-us/">nana</a>: Nana是现代C++风格的GUI编程的跨平台库。</li>
+<li><a href="https://github.com/mitsuba-renderer/nanogui">NanoGui</a>: 简约、跨平台的控件库，用于OpenGL 3.x及更高版本。</li>
+<li><a href="https://github.com/Immediate-Mode-UI/Nuklear">nuklear</a>: 单个头文件的ANSI C gui库。</li>
+<li><a href="http://qcustomplot.com/">QCustomPlot</a>: 没有更多依赖关系的Qt绘图控件。</li>
+<li><a href="http://qwt.sourceforge.net/">Qwt</a>: 用户与技术应用的Qt 控件。</li>
+<li><a href="http://qwtplot3d.sourceforge.net/">QwtPlot3D</a>: 功能丰富的基于Qt/OpenGL的C++编程库，本质上提供了一群3D控件。</li>
+<li><a href="https://github.com/mikke89/RmlUi">RmlUi</a>: 进化的HTML/CSS用户界面库，libRocket的分支。 </li>
+<li><a href="http://sciter.com/">Sciter</a>: Sciter是可嵌入的HTML/CSS/脚本语言引擎，旨在用于现代桌面应用程序的UI层。</li>
+<li><a href="http://wxwidgets.org/">wxWidgets</a> C++库，允许开发人员使用一个代码库可以为widows， Mac OS X，Linux和其他平台创建应用程序。</li>
+<li><a href="https://github.com/yue/yue">Yue</a>: 创建本机跨平台GUI应用的库。</li>
+</ul>
+<h3 id="_21">图形<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/assimp/assimp">assimp</a>: 开放资产导入库（assimp）是跨平台的3D模型导入库，旨在为不同的3D资产文件格式提供通用的API。</li>
+<li><a href="https://github.com/bkaradzic/bgfx">bgfx</a>: 跨平台的渲染库。</li>
+<li><a href="https://github.com/blend2d/blend2d">Blend2D</a>: 由JIT编译器提供技术支持的2D矢量图形引擎。</li>
+<li><a href="https://github.com/GameFoundry/bsf">bs::framework</a>: 用于实时图形应用开发的现代C++14库。</li>
+<li><a href="http://www.cairographics.org/">Cairo</a>: 支持多种输出设备的2D图形库。</li>
+<li><a href="https://github.com/walkerje/C-Turtle">C-Turtle</a>: 充当Clmg封装器的C++11 turtle图形库，只有头文件。</li>
+<li><a href="https://github.com/DiligentGraphics/DiligentEngine">Diligent Engine</a>: 现代、跨平台、低阶的3D图形库。</li>
+<li><a href="https://github.com/Microsoft/DirectXTK">DirectXTK</a>: 用于在C++中编写DirectX 11.x代码的帮助类的集合。</li>
+<li><a href="https://github.com/glfw/glfw">GLFW</a>: 简单、跨平台的OpenGL处理库。</li>
+<li><a href="https://github.com/kosua20/herebedragons">herebedragons</a>: 使用各种引擎、框架或者API实现的基本3D场景。</li>
+<li><a href="https://github.com/horde3d/Horde3D">Horde3D</a> 一个小型的3D渲染和动画引擎。</li>
+<li><a href="https://github.com/google/ion">Ion</a>: 小型高效的库集合，用于构建使用3D图形的跨平台客户端或服务器应用程序。</li>
+<li><a href="http://irrlicht.sourceforge.net/">Irrlicht</a>: C++编写的高性能实时3D引擎。</li>
+<li><a href="https://github.com/libigl/libigl">libigl</a>: 简单的C++几何处理库。</li>
+<li><a href="https://github.com/LukasBanana/LLGL">LLGL</a>: 低水平图形库（LLGL）是现代图形API的薄抽象层。</li>
+<li><a href="https://github.com/mosra/magnum">magnum</a>: 用于游戏和数据可视化的轻量级和模块化的 C++ 11 /C++ 14图形中间件。</li>
+<li><a href="https://github.com/memononen/nanovg">NanoVG</a>: OpenGL之上的抗锯齿2D矢量图形库，用于UI和可视化。</li>
+<li><a href="http://www.ogre3d.org/">Ogre 3D</a>: 用C++编写的一个面向场景，实时，灵活的3D渲染引擎（并非游戏引擎）。</li>
+<li><a href="http://www.openscenegraph.org/">OpenSceneGraph</a>: 具有高性能的开源3D图形工具包。</li>
+<li><a href="https://github.com/PixarAnimationStudios/OpenSubdiv">OpenSubdiv</a>: Pixar的库，用于评估和渲染CPU和GPU上的细分曲面。</li>
+<li><a href="http://www.openvdb.org/">OpenVDB</a>: 用于存储、编辑、渲染体积数据库的库和工具。</li>
+<li><a href="http://www.panda3d.org/">Panda3D</a>: 用于3D渲染和游戏开发的框架，用Python和C++编写。</li>
+<li><a href="https://github.com/wdas/partio">Partio</a>: 用于处理粒子数据的库，支持大多数常见文件形式。</li>
+<li><a href="https://github.com/google/skia">Skia</a> 用于绘制文字，图形和图像的完整的2D图形库。</li>
+<li><a href="https://github.com/msteinbeck/tinyspline">TinySpline</a>: 小型但强大的ANSI C库，用于差值、转换和查询任意NURBS、B-样条函数和贝赛尔曲线。</li>
+<li><a href="https://github.com/urho3d/Urho3D">urho3d</a> 跨平台的渲染和游戏引擎。</li>
+<li><a href="https://github.com/xelatihy/yocto-gl">Yocto/GL</a>: 用于数据驱动的基于物理图形的微型C++库。</li>
+</ul>
+<h3 id="_22">图像处理<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.boost.org/doc/libs/1_56_0/libs/gil/doc/index.html">Boost.GIL</a>: 通用图像库。</li>
+<li><a href="http://cimg.sourceforge.net/">CImg</a>: 用于图像处理的小型开源C++工具包。</li>
+<li><a href="http://www.xdp.it/cximage.htm">CxImage</a>: 用于加载，保存，显示和转换的图像处理和转换库，可以处理的图片格式包括 BMP, JPEG, GIF, PNG, TIFF, MNG, ICO, PCX, TGA, WMF, WBMP, JBG, J2K。</li>
+<li><a href="https://github.com/davisking/dlib">Dlib</a>: 现代C++11的机器学习、计算机视觉、数值优化和深度学习工具包。</li>
+<li><a href="http://freeimage.sourceforge.net/">FreeImage</a>: 开源库，支持现在多媒体应用所需的通用图片格式和其他格式。</li>
+<li><a href="https://github.com/libgd/libgd">GD</a>: GD图形库，有名的用于PHP中图形加载/操作和缩略图生成。</li>
+<li><a href="http://dicom.offis.de/dcmtk.php.en">DCMTK</a>: DICOM工具包。</li>
+<li><a href="http://gdcm.sourceforge.net/wiki/index.php/Main_Page">GDCM</a>: Grassroots DICOM 库。</li>
+<li><a href="http://www.itk.org/">ITK</a>: 跨平台的开源图像分析系统。</li>
+<li><a href="https://github.com/DanBloomberg/leptonica">Leptonica</a>: Leptonica是一个包含软件的开源库，其广泛应用于图像处理和图形分析应用程序。</li>
+<li><a href="https://github.com/ShiqiYu/libfacedetection">libfacedetection</a>: 用于图像中人脸检测的开源库，其人脸检测的速度能达到1500FPS。</li>
+<li><a href="https://github.com/libjpeg-turbo/libjpeg-turbo">libjpeg-turbo</a>: 使用SIMD指令来加速基线JPEG编码和解码的JPEG图像编解码器。</li>
+<li><a href="https://github.com/jcupitt/libvips">libvips</a>: 具有低内存需求的快速图像处理库。</li>
+<li><a href="http://www.imagemagick.org/script/api.php">Magick++</a>: ImageMagick程序的C++接口。</li>
+<li><a href="http://www.imagemagick.org/script/api.php">MagickWnd</a>: ImageMagick程序的C++接口。</li>
+<li><a href="http://opencv.org/">OpenCV</a>:  开源计算机视觉类库。</li>
+<li><a href="http://www.openexr.com/">OpenEXR</a>: 具有高动态范围成像的跨平台库。</li>
+<li><a href="https://github.com/OpenImageIO/oiio">OpenImageIO</a>: 强大的图像和纹理处理库，支持多种常见的有损和RAW格式。</li>
+<li><a href="https://github.com/ermig1979/Simd">Simd</a>: 使用SIMD的C++图像处理库: SSE，SSE2，SSE3，SSSE3，SSE4.1，SSE4.2，AVX，AVX2，AVX-512，VMX（Altivec）和VSX（Power7），NEON for ARM。</li>
+<li><a href="https://github.com/nothings/stb/blob/master/stb_image.h">stb-image</a>: STB单个头文件的图像加载库。</li>
+<li><a href="https://code.google.com/p/tesseract-ocr/">tesseract-ocr</a>: OCR引擎。</li>
+<li><a href="https://github.com/cdcseacave/TinyEXIF">TinyEXIF</a>: 用于JPEG的微型ISO兼容的C++ EXIF和XMP解析库。</li>
+<li><a href="https://github.com/matt-42/vpp">Video++</a>: C++ 14高性能的视频和图像处理库。</li>
+<li><a href="https://github.com/ukoethe/vigra">VIGRA</a>: 用于图像分析通用C++计算机视觉库。</li>
+<li><a href="http://www.vtk.org/">VTK</a>: 用于3D计算机图形学，图像处理和可视化的开源免费软件系统。</li>
+</ul>
+<h3 id="_23">国际化<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.gnu.org/software/gettext/">gettext</a>: GNU `gettext'。</li>
+<li><a href="http://site.icu-project.org/">IBM ICU</a>: 提供Unicode 和全球化支持的C、C++ 和Java库。</li>
+<li><a href="http://www.gnu.org/software/libiconv/">libiconv</a>: 用于不同字符编码之间的编码转换库。</li>
+<li><a href="https://github.com/sheredom/utf8.h">utf8.h</a>: C和C++的单个头文件的utf8字符串函数。</li>
+<li><a href="https://github.com/JuliaStrings/utf8proc">utf8proc</a>: 干净的C库，用于处理UTF-8 Unicode数据。</li>
+</ul>
+<h2 id="_24">进程间通信<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://thrift.apache.org/">Apache Thrift</a>: 高效的跨语言IPC/RPC，可在C++、Java、Python、PHP、C#和许多其它语言之间运行。最初是由Facebook开发。</li>
+<li><a href="https://github.com/capnproto/capnproto">Cap'n Proto</a>: 快速的数据交换格式和基于功能的RPC系统。</li>
+<li><a href="https://github.com/continental/ecal">eCAL</a>: 发布/订阅，客户端/服务器，C++/Python/C#，各种消息协议（protobuf, capnproto ..）。</li>
+<li><a href="https://github.com/grpc/grpc">gRPC</a>: 高性能、开源、通用的RPC框架。</li>
+<li><a href="https://github.com/zeroc-ice/ice">Ice</a>: 全面的RPC框架，支持C++、C＃、Java、JavaScript、Python等。</li>
+<li><a href="https://github.com/cinemast/libjson-rpc-cpp">libjson-rpc-cpp</a>: 用于C++服务器和客户端的JSON-RPC框架。</li>
+<li><a href="https://github.com/nanomsg/nanomsg">nanomsg</a>: 好几个“可扩展协议”的简单高性能实现。</li>
+<li><a href="https://github.com/nanomsg/nng">nng</a>: nanomsg的下一代，轻量级、无代理消息的传递库。</li>
+<li><a href="https://github.com/rpclib/rpclib">rpclib</a>: 现代C++的msgpack-RPC服务器和客户端库。</li>
+<li><a href="https://github.com/pearu/simple-rpc-cpp">simple-rpc-cpp</a>: C / C++函数的简单RPC封装生成器。</li>
+<li><a href="http://wamp.ws/">WAMP</a>: 提供RPC和发布/订阅消息传递模式。（各种实现，各种语言）</li>
+<li><a href="http://xmlrpc-c.sourceforge.net/">xmlrpc-c</a>: 基于XML和HTTP的轻量级RPC库。</li>
+</ul>
+<h3 id="json">Json<a class="headerlink" href="#json" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.boost.org/doc/libs/1_55_0/doc/html/property_tree.html">Boost.PropertyTree</a>: 属性树解析器/生成器，可用于解析XML / JSON / INI / Info文件。</li>
+<li><a href="https://github.com/DaveGamble/cJSON">cJSON</a>: ANSI C的超轻量级JSON解析器。</li>
+<li><a href="https://github.com/cesanta/frozen">frozen</a>:  C/C++的Json解析生成器。</li>
+<li><a href="https://github.com/akheron/jansson">Jansson</a>: 进行编解码和处理Json数据的C语言库。</li>
+<li><a href="https://github.com/chrismanning/jbson">jbson</a>: C++14中构建和迭代BSON data和Json 文档的库。</li>
+<li><a href="https://github.com/jeaye/jeayeson">JeayeSON</a>: 非常健全的C++ JSON库，只包含头文件。</li>
+<li><a href="https://github.com/zserge/jsmn">Jsmn</a>: C语言中的简约JSON解析器。</li>
+<li><a href="https://github.com/nlohmann/json">json</a>: 用于现代C++的JSON。</li>
+<li><a href="https://github.com/hjiang/jsonxx">JSON++</a>:  C++的JSON 解析器。</li>
+<li><a href="https://github.com/sheredom/json.h">json.h</a>: 在C和C++中解析JSON的简单的单头文件/单源文件的解决方案。</li>
+<li><a href="https://github.com/json-c/json-c">json-c</a>: C中的JSON实现。</li>
+<li><a href="https://github.com/danielaparker/jsoncons">jsoncons</a>: 使用JSONPointer、JSONPatch、JSONPath和JMESPath的JSON和类似JSON二进制格式的C++库，只有头文件。</li>
+<li><a href="https://github.com/open-source-parsers/jsoncpp">JsonCpp</a>: 可与JSON交互的C++库。</li>
+<li><a href="https://github.com/udp/json-parser">json-parser</a>: 用可移植的ANSI C编写的JSON解析器，占用内存非常少。</li>
+<li><a href="https://github.com/dropbox/json11">json11</a>: 一个迷你的C++11 JSON库。</li>
+<li><a href="https://github.com/tgockel/json-voorhees">json-voorhees</a>: C++的JSON库。支持C++ 11，无依赖关系，快速且对开发人员友好。</li>
+<li><a href="https://github.com/amir-s/jute">jute</a>: 非常简单的C++ JSON解析器。</li>
+<li><a href="https://github.com/vincenthz/libjson">ibjson</a>: C语言中的JSON解析和打印库，很容易和任何模型集成。。</li>
+<li><a href="http://sourceforge.net/projects/libjson/">libjson</a>: 轻量级的JSON库。</li>
+<li><a href="https://github.com/vstakhov/libucl">LIBUCL</a>: 通用配置库解析器。</li>
+<li><a href="https://github.com/kgabis/parson">parson</a>: 用C编写的轻量级的JSON库。</li>
+<li><a href="https://github.com/kazuho/picojson">PicoJSON</a>: C++中JSON解析序列化，只包含头文件。</li>
+<li><a href="https://github.com/gaudecker/qt-json">qt-json</a>: 用于JSON数据和 QVariant层次间的相互解析的简单类。</li>
+<li><a href="https://github.com/flavio/qjson">QJson</a>: 将JSON数据映射到QVariant对象的基于Qt的库。</li>
+<li><a href="https://github.com/miloyip/rapidjson">RapidJSON</a>: 用于C++的快速JSON 解析生成器，包含SAX和DOM两种风格的API。</li>
+<li><a href="https://github.com/chadaustin/sajson">sajson</a>: 用于C++ 11的轻量级、高性能的JSON解析器。</li>
+<li><a href="https://github.com/lemire/simdjson">simdjson</a>: 极快的JSON库，可以千兆字节每秒的速度解析JSON。</li>
+<li><a href="https://github.com/taocpp/json">taoJSON</a>: 零依赖的C++JSON库，只包含头文件。</li>
+<li><a href="https://bitbucket.org/awangk/ujson">ujson</a>: µjson是一个小型、C++ 11、UTF-8、JSON的库。</li>
+<li><a href="https://github.com/lloyd/yajl">YAJL</a>: C语言中快速流JSON解析库。</li>
+</ul>
+<h3 id="_25">日志<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/3Hren/blackhole">Blackhole</a>: 基于属性的日志框架，旨在快速、模块化和高度可定制。</li>
+<li><a href="http://www.boost.org/doc/libs/1_56_0/libs/log/doc/html/index.html">Boost.Log</a>: 设计非常模块化，并且具有扩展性。</li>
+<li><a href="https://github.com/easylogging/easyloggingpp">Easylogging++</a>: 适用于C++ 11（或更高版本）应用程序的超轻量级、高性能的日志库。</li>
+<li><a href="https://github.com/KjellKod/g3log">G3log</a>: 具有动态接收模块的异步记录器。</li>
+<li><a href="https://github.com/google/glog">glog</a>: Google日志模块的C++实现。</li>
+<li><a href="http://log4cpp.sourceforge.net/">Log4cpp</a>: C++类库，用于灵活地添加日志到文件，系统日志，IDSA和其他地方。</li>
+<li><a href="https://github.com/log4cplus/log4cplus">log4cplus</a>: 易于使用的C++日志API，可提供对日志管理和配置的线程安全、灵活且任意粒度的控制。</li>
+<li><a href="https://github.com/emilk/loguru">loguru</a>: 轻量级的C++日志库。</li>
+<li><a href="https://github.com/SergiusTheBest/plog">plog</a>: C++可移植且简单的日志，少于1000行代码。</li>
+<li><a href="https://github.com/mattiasflodin/reckless">reckless</a>: C++低延迟、高吞吐量、异步的日志库。</li>
+<li><a href="https://github.com/gabime/spdlog">spdlog</a>: 超级快的C++日志库，只包含头文件。</li>
+<li><a href="http://www.templog.org/">templog</a>: 小型、轻量级的 C++ 库，可以添加日志到你的C++应用程序中。</li>
+<li><a href="http://baical.net/p7.html">P7Baical</a>: 开源、跨平台的库，用于在最小限度使用CPU和内存的情况下高速发送遥测和跟踪数据。</li>
+<li><a href="https://github.com/odygrd/quill">Quill</a>: 异步、跨平台、低时延的日志库。</li>
+</ul>
+<h3 id="_26">机器学习<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/BVLC/caffe">Caffe</a>: 快速的神经网络框架。</li>
+<li><a href="https://github.com/liuliu/ccv">CCV</a>: 基于C /缓存/核心的计算机视觉库，现代计算机视觉库。</li>
+<li><a href="https://github.com/pjreddie/darknet">darknet</a>: 用C和CUDA编写的开源神经网络框架。</li>
+<li><a href="https://github.com/davisking/dlib">Dlib</a>: 现代C++ 11的机器学习、计算机视觉、数值优化和深度学习的工具包。</li>
+<li><a href="https://github.com/FidoProject/Fido">Fido</a>: 用于嵌入式电子和机器人技术的高度模块化的C++机器学习库。</li>
+<li><a href="https://github.com/facebookresearch/flashlight">flashlight</a>: 来自Facebook AI研究中心的快速、灵活的机器学习库，其完全用C++编写，基于ArrayFire张量库。</li>
+<li><a href="https://github.com/cjlin1/libsvm">libsvm</a>: 支持向量机的简单、易用、高效的库。</li>
+<li><a href="https://github.com/meta-toolkit/meta">MeTA</a>: 现代C++的数据科学工具包。</li>
+<li><a href="https://github.com/dmlc/minerva">Minerva</a>: 快速、灵活的深度学习系统。</li>
+<li><a href="http://www.mlpack.org/">mlpack</a>: 可扩展的C++机器学习库。</li>
+<li><a href="https://github.com/Itseez/opencv">OpenCV</a>: 开源计算机视觉库。</li>
+<li><a href="https://github.com/GHamrouni/Recommender">Recommender</a>: 使用协同过滤进行产品推荐/建议的C语言库。</li>
+<li><a href="https://github.com/szcom/rnnlib">RNNLIB</a>: RNNLIB是用于序列学习问题的递归神经网络库。</li>
+<li><a href="https://github.com/shogun-toolbox/shogun">SHOGUN</a>: Shogun 机器学习工具。</li>
+<li><a href="https://code.google.com/p/sofia-ml/">sofia-ml</a>: 用于机器学习的快速增量算法套件。</li>
+<li><a href="https://github.com/vlfeat/vlfeat">VLFeat</a>: VLFeat开源库实现了流行的计算机视觉算法，这些算法专门用于图像理解以及局部特征提取和匹配。</li>
+<li><a href="https://github.com/dmlc/xgboost">xgboost</a>: 用于Python、R、Java、Scala、C++等的可扩展、便携式和分布式梯度增强（GBDT，GBRT或GBM）的库。在单机、Hadoop、Spark、Flink和DataFlow上运行。</li>
+</ul>
+<h3 id="_27">数学<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/b-k/apophenia">Apophenia</a>: 用于统计和科学计算的C库。</li>
+<li><a href="http://arma.sourceforge.net/">Armadillo</a>: 用于线性代数和科学计算的快速C++库。</li>
+<li><a href="https://github.com/autodiff/autodiff">autodiff</a>: 用于自动微分的现代、快速且富有表现力的C++库。</li>
+<li><a href="https://code.google.com/p/blaze-lib/">blaze</a>: 高性能的C++数学库，用于密集和稀疏算法。</li>
+<li><a href="http://www.boost.org/doc/libs/master/libs/multiprecision/doc/html/index.html">Boost.Multiprecision</a>: 在C++中提供更高范围/精度的整数、有理数和浮点数类型，只包含头文件或者在GMP / MPFR / LibTomMath后端。</li>
+<li><a href="http://ceres-solver.org/">ceres-solver</a>: 来自谷歌的C++库，用于建模和解决大型复杂非线性最小平方问题。</li>
+<li><a href="https://github.com/CGAL/cgal">CGAL</a>: 高效，可靠的几何算法集合。</li>
+<li><a href="http://cmldev.net/">cml</a>: 用于游戏和图形的免费C++数学库。</li>
+<li><a href="https://github.com/davisking/dlib">Dlib</a>: 现代C++11的机器学习、计算机视觉、数值优化和深度学习工具包。</li>
+<li><a href="http://eigen.tuxfamily.org/">Eigen</a>: 高级C++模板头文件库，包括线性代数，矩阵，向量操作，数值解决和其他相关的算法。</li>
+<li><a href="http://www.partow.net/programming/exprtk/">ExprTK</a>: C++数学表达式工具包库（ExprTk）是一个易于使用、易于集成且非常高效的运行时数学表达式解析器和评估引擎。</li>
+<li><a href="https://www.geometrictools.com/">Geometric Tools</a>: 用于数学、图形、图像分析和物理学领域计算的C++库。</li>
+<li><a href="https://github.com/g-truc/glm">GLM</a>: 只包含头文件的C++数学库，可与OpenGL的GLSL数学匹配并互操作。</li>
+<li><a href="http://ggt.sourceforge.net/">GMTL</a>: 数学图形模板库是一组广泛实现基本图形的工具。</li>
+<li><a href="https://gmplib.org/">GMP</a>: 用于个高精度计算的C/C++库，处理有符号整数，有理数和浮点数。</li>
+<li><a href="https://github.com/jeremyong/klein">Klein</a>: 快速、SIMD优化的C++ 17几何代数库，用于点、线和平面投影、相交、连接、刚体运动等。</li>
+<li><a href="https://github.com/sgorsten/linalg">linalg.h</a>: C++的单头文件、公共域、短向量数学库。</li>
+<li><a href="https://github.com/CertiVox/MIRACL">MIRACL</a>: 多精度整数和有理数算法加密库。</li>
+<li><a href="http://beltoforion.de/article.php?a=muparser">muparser</a>: muParser是用C++编写的可扩展、高性能的数学表达式解析库。</li>
+<li><a href="https://github.com/libtom/libtommath">LibTomMath</a>: 完全用C编写的免费、开源、可移植的数论多精度整数库。</li>
+<li><a href="https://github.com/datenwolf/linmath.h">linmath.h</a>: 精益线性数学库，主要用于图形编程。</li>
+<li><a href="https://sourceforge.net/projects/lpsolve">lp_solve</a>: 用于制定和解决线性编程问题的库。</li>
+<li><a href="https://github.com/xianyi/OpenBLAS">OpenBLAS</a>: 基于GotoBLAS2 1.13 BSD版本的优化BLAS库。</li>
+<li><a href="https://github.com/lballabio/quantlib">QuantLib</a>v: 用于计量金融的免费/开源库。</li>
+<li><a href="https://github.com/kthohr/stats">StatsLib</a>: 统计分布函数的C++库，只包含头文件。</li>
+<li><a href="https://github.com/symengine/symengine">SymEngine</a>: 快速符号处理库，用C++重写了SymPy的核心。</li>
+<li><a href="https://github.com/codeplea/tinyexpr">TinyExpr</a>: 用于解析和评估字符串中的数学表达式的C库。</li>
+<li><a href="https://github.com/VcDevel/Vc">Vc</a>: C++的SIMD矢量类。</li>
+<li><a href="http://versor.mat.ucsb.edu/">Versor</a>: （快速的）几何代数的通用C++库，包括欧几里得、投影，保角、时空等。</li>
+<li><a href="http://www.wykobi.com/">Wykobi</a>: 高效、健壮且易于使用的C++库，面向C++ 2D / 3D的计算几何例程。</li>
+<li><a href="https://github.com/QuantStack/xtensor">xtensor</a>: 受NumPy语法启发的C++ 14库，用于使用多维数组表达式进行数值分析。</li>
+<li><a href="https://github.com/stillwater-sc/universal">universal</a>: 只包含头文件的C++ 14库，实现任意假定算数。假定数值系统是一个锥形浮点，比IEEE浮点更有效。假定数使可复现的计算科学成为可能。</li>
+</ul>
+<h2 id="_28">内存分配<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/ivmai/bdwgc">Boehm GC</a>: C和C++的保守的垃圾回收器。</li>
+<li><a href="https://github.com/Snaipe/libcsptr">C Smart Pointers</a>: （GNU）C编程语言的智能指针。</li>
+<li><a href="https://github.com/emeryberger/Hoard">Hoard</a>: 快速、可扩展和节约内存的Malloc，支持Linux、Windows和Mac。</li>
+<li><a href="https://github.com/jemalloc/jemalloc">jemalloc</a>: 通用的malloc（3）实现，强调避免存储碎片和可扩展的并发支持。</li>
+<li><a href="https://github.com/foonathan/memory">memory</a>: 兼容STL的C++内存分配器库。</li>
+<li><a href="https://github.com/mtrebi/memory-allocators">memory-allocators</a>: 自定义内存分配器，可提高动态内存分配的性能。</li>
+<li><a href="https://github.com/microsoft/mimalloc">mimalloc</a>: 具有出色性能的紧凑型通用分配器。</li>
+<li><a href="https://github.com/orangeduck/tgc">tgc</a>: 用 ~500 LOC编写的C语言微型垃圾回收器。</li>
+</ul>
+<h3 id="_29">多媒体<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://gstreamer.freedesktop.org/">GStreamer</a>: 构建媒体处理组件图形的库。</li>
+<li><a href="https://github.com/libass/libass">libass</a>: ASS / SSA字幕格式的便携式字幕渲染器。</li>
+<li><a href="https://github.com/libass/libass">libass</a>: 处理多媒体内容（例如音频、视频、字幕和相关元数据）的库和工具的集合。</li>
+<li><a href="http://www.live555.com/liveMedia/">LIVE555 Streaming Media</a>: 使用开放标准协议(RTP/RTCP, RTSP, SIP) 的多媒体流库。</li>
+<li><a href="https://wiki.videolan.org/LibVLC">libVLC</a>: libVLC (VLC SDK)媒体框架。</li>
+<li><a href="https://github.com/MediaArea/MediaInfoLib">MediaInfoLib</a>: 用于视频和音频文件中最相关的技术和标签数据的方便统一显示。</li>
+<li><a href="https://github.com/wang-bin/QtAV">QtAv</a>: 基于Qt和FFmpeg的多媒体播放框架，能够帮助你轻而易举地编写出一个播放器。</li>
+<li><a href="http://www.libsdl.org/">SDL</a>: 简单直控媒体层。</li>
+<li><a href="http://www.sfml-dev.org/">SFML</a>: 快速，简单的多媒体库。</li>
+<li><a href="https://github.com/taglib/taglib">TagLib</a>: 用于读取和编辑几种流行音频格式的元数据的库。</li>
+</ul>
+<h3 id="_30">网络<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.cs.wustl.edu/~schmidt/ACE.html">ACE</a>: C++面向对象网络编程工具包。</li>
+<li><a href="http://think-async.com/">Boost.Asio</a>: 用于网络和底层I/O编程的跨平台的C++库。</li>
+<li><a href="https://github.com/boostorg/beast">Boost.Beast</a>: 在C++ 11中基于Boost.Asio构建的HTTP和WebSocket。</li>
+<li><a href="https://github.com/Organic-Code/Breep">Breep</a>: 基于事件的高级C++ 14点对点库。</li>
+<li><a href="https://github.com/Microsoft/cpprestsdk">C++ REST SDK</a>: C++ REST SDK（以前称为Casablanca）。</li>
+<li><a href="https://github.com/corvusoft/restbed">Restbed</a>: C++ 11异步RESTful框架。</li>
+<li><a href="https://github.com/Stiffstream/restinio">Restinio</a>: 只有头文件的C++ 14库，为您提供嵌入式HTTP / Websocket服务器。</li>
+<li><a href="https://github.com/c-ares/c-ares">c-ares</a>: 用于异步DNS请求的C库。</li>
+<li><a href="https://github.com/yhirose/cpp-httplib">cpp-httplib</a>: 单文件的C++ 11 HTTP / HTTPS服务器库，只包含头文件。</li>
+<li><a href="http://cpp-netlib.org/">cpp-netlib</a>: 高级网络编程的开源库集合。</li>
+<li><a href="https://github.com/cpp-netlib/uri">cpp-netlib/uri</a>: C++的URI解析器/生成器库，与RFC 3986和RFC 3987兼容。</li>
+<li><a href="https://github.com/whoshuu/cpr">cpr</a>: 现代C++ HTTP请求库，具有简单但功能强大的接口。模仿Python Requests模块。</li>
+<li><a href="https://github.com/JosephP91/curlcpp">curlcpp</a>: CURL（libcurl）的面向对象C++封装器。</li>
+<li><a href="https://github.com/DPDK/dpdk">DPDK</a>: 用于快速打包处理的数据平面开发工具、库和驱动程序。</li>
+<li><a href="https://github.com/rxi/dyad">Dyad.c</a>: C的异步网络。</li>
+<li><a href="https://github.com/lsalzman/enet">ENet</a>: 可靠的UDP网络库。</li>
+<li><a href="https://github.com/Qihoo360/evpp">evpp</a>: 具有TCP / UDP / HTTP协议的C++高性能网络。</li>
+<li><a href="https://github.com/h2o/h2o">H2O</a>: 优化的HTTP服务器，支持HTTP / 1.x和HTTP / 2。它也可以用作库。</li>
+<li><a href="https://github.com/nodejs/http-parser">HTTP Parser</a>: C的http请求/响应解析器。</li>
+<li><a href="https://github.com/skywind3000/kcp/blob/master/README.en.md">KCP</a>: 快速、可靠的ARQ协议，可帮助应用程序减少网络延迟。</li>
+<li><a href="http://curl.haxx.se/libcurl/">libcurl</a>: 多协议文件传输库。</li>
+<li><a href="https://github.com/etr/libhttpserver">libhttpserver</a>: 用于创建嵌入式Rest HTTP服务器（以及更多）的C++库。</li>
+<li><a href="http://www.gnu.org/software/libmicrohttpd/">Libmicrohttpd</a>: GNU libmicrohttpd是一个小型C库，可以轻松地将HTTP服务器作为另一个应用程序的一部分运行。</li>
+<li><a href="https://github.com/the-tcpdump-group/libpcap">libpcap</a>: 用于网络流量捕获的可移植C / C++库。</li>
+<li><a href="https://github.com/devsisters/libquic">libquic</a>: 从Chromium的QUIC实现中提取的QUIC协议库。</li>
+<li><a href="https://github.com/edenhill/librdkafka">librdkafka</a>: 用于C和C++的Apache Kafka客户端库。</li>
+<li><a href="https://github.com/warmcat/libwebsockets">libwebsockets</a>: 提供客户端和服务器库的轻量级纯C WebSocket实现。</li>
+<li><a href="http://savannah.nongnu.org/projects/lwip/">lwIP</a>: 轻量级TCP / IP堆栈。</li>
+<li><a href="https://github.com/cesanta/mongoose">Mongoose</a><span style="text-decoration: underline;">: </span>非常轻量级的网络服务器。</li>
+<li><a href="https://github.com/LiamBindle/MQTT-C">MQTT-C</a>: 适用于嵌入式系统和类PC机的便携式MQTT C客户端。</li>
+<li><a href="https://github.com/mtcp-stack/mtcp">mTCP</a>: 用于多核系统的高度可扩展的用户级TCP堆栈。</li>
+<li><a href="https://github.com/chenshuo/muduo">Muduo</a>: 用于Linux多线程服务器的C++非阻塞网络库。</li>
+<li><a href="https://github.com/nghttp2/nghttp2">nghttp2</a>: HTTP / 2 C库。</li>
+<li><a href="https://github.com/davidmoreno/onion">Onion</a>: C语言HTTP服务器库，其设计为轻量级，易使用。</li>
+<li><a href="https://github.com/ntop/PF_RING">PF_RING™</a>: 高速打包处理框架。</li>
+<li><a href="https://github.com/h2o/picohttpparser">PicoHTTPParser</a>: 微小、原始、快速的HTTP请求/响应解析器。</li>
+<li><a href="https://github.com/pocoproject">POCO</a>: 用于构建网络和基于互联网应用程序的C++类库，可以运行在桌面，服务器，移动和嵌入式系统。</li>
+<li><a href="https://github.com/facebook/proxygen">Proxygen</a>: Facebook的C++ HTTP库集合，包括易于使用的HTTP服务器。</li>
+<li><a href="https://github.com/OculusVR/RakNet">RakNet</a>: 为游戏开发人员提供的跨平台的开源C++网络引擎。</li>
+<li><a href="https://github.com/mrtazz/restclient-cpp">restclient-cpp</a>: 用于C++的简单REST客户端。它包装libcurl用于HTTP请求。</li>
+<li><a href="https://github.com/mattgodbolt/seasocks">Seasocks</a>: 具有WebSockets支持的简单、小型的C++嵌入式Web服务器。</li>
+<li><a href="http://siliconframework.org/">Silicon</a>: 高性能、面向中间件的C++ 14 http Web框架。</li>
+<li><a href="https://github.com/eduardsui/tlse">tlse</a>: 单个C文件的TLS 1.2 / 1.3实现，使用tomcrypt作为加密库。</li>
+<li><a href="https://github.com/vinipsmaker/tufao">Tufão</a>: 基于Qt构建的C++异步Web框架。</li>
+<li><a href="https://github.com/uriparser/uriparser">uriparser</a>: 严格符合RFC 3986的URI解析和处理库。</li>
+<li><a href="https://github.com/uNetworking/uWebSockets">uWebSockets</a>: µWS是最轻量级、高效和可伸缩的WebSocket和HTTP服务器的实现之一。</li>
+<li><a href="https://github.com/riolet/WAFer">WAFer</a>: 基于C语言的超轻型软件平台，用于可扩展的服务器端和网络应用。为C程序员考虑了node.js。</li>
+<li><a href="https://github.com/facebook/wangle">Wangle</a>: 客户端/服务器应用程序框架，用于构建异步的、事件驱动的现代C++服务。</li>
+<li><a href="https://github.com/facebook/wdt">wdt</a>: 可嵌入式库（和命令行工具），旨在通过多个TCP路径尽可能快地在2个系统之间传输数据。</li>
+<li><a href="https://github.com/zaphoyd/websocketpp">WebSocket++</a>: 基于C++/Boost Aiso的websocket 客户端/服务器库。</li>
+<li><a href="https://github.com/seladb/PcapPlusPlus">PcapPlusPlus</a>: 跨平台的C++网络嗅探以及数据包解析和构建的框架。</li>
+<li><a href="http://zeromq.org/">ZeroMQ</a>: 高速，模块化的异步通信库。</li>
+</ul>
+<h2 id="pdf">PDF<a class="headerlink" href="#pdf" title="Permanent link">&para;</a></h2>
+<p>解析和处理PDF文档的库。</p>
+<ul>
+<li><a href="https://github.com/libharu/libharu">libharu</a>: 免费、跨平台、开源的软件库，用于生成PDF。</li>
+<li><a href="https://litepdf.sourceforge.io/">litePDF</a>: 创建和编辑PDF文档的库，它通过设备上下文使用GDI功能来绘制页面内容。</li>
+<li><a href="https://mupdf.com/">MuPDF</a>: 轻量级的PDF、XPS和电子书查看器。</li>
+<li><a href="http://podofo.sourceforge.net/">PoDoFo</a>: 使用PDF文件格式的库。</li>
+<li><a href="https://poppler.freedesktop.org/">Poppler</a>: 基于xpdf-3.0代码库的开源、多后端的PDF渲染库。</li>
+<li><a href="https://www.xpdfreader.com/">Xpdf</a>: Xpdf是一款免费的PDF查看器和工具包，包括文本提取器、图像转换器、HTML转换器等。</li>
+<li><a href="http://www.dynaforms.com/">DynaPDF</a>: 易于使用的PDF生成库。</li>
+</ul>
+<h3 id="_31">物理学<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<p>动力学仿真引擎</p>
+<ul>
+<li><a href="https://code.google.com/p/box2d/">Box2D</a>: 2D的游戏物理引擎。</li>
+<li><a href="https://github.com/bulletphysics/bullet3">Bullet</a>: 3D的游戏物理引擎。</li>
+<li><a href="https://github.com/slembcke/Chipmunk2D">Chipmunk</a>: 快速、轻量级的2D游戏物理库。</li>
+<li><a href="https://github.com/google/liquidfun">LiquidFun</a>: 2D的游戏物理引擎。</li>
+<li><a href="https://github.com/MADEAPPS/newton-dynamics">Newton Dynamics</a>: 用于物理环境实时仿真的集成解决方案。</li>
+<li><a href="http://www.ode.org/">ODE</a>: 开放动力学引擎-开源，高性能库，模拟刚体动力学。</li>
+<li><a href="https://github.com/vanderlin/ofxBox2d">ofxBox2d</a>: Box2D开源框架包装器。</li>
+<li><a href="https://github.com/NVIDIAGameWorks/PhysX-3.4">PhysX</a>: Nvidia开发的开源的实时物理引擎中间件SDK，作为Nvidia GameWorks软件套件的一部分。</li>
+<li><a href="https://github.com/projectchrono/chrono">Project Chrono</a>: 开源的多物理场仿真引擎。</li>
+<li><a href="https://github.com/vsoftco/qpp">Quantum++</a>: 现代的C++ 11量子计算库。</li>
+<li><a href="https://github.com/simbody/simbody">Simbody</a>: 高性能C++多体动力学/物理库，模拟关节生物力学和机械系统，像车辆，机器人和人体骨骼。</li>
+<li><a href="https://github.com/sofa-framework/sofa">SOFA</a>: SOFA是一个针对实时仿真的开源框架，其着重于医学仿真。</li>
+</ul>
+<h2 id="_32">映射<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/aantron/better-enums">Better Enums</a>: 映射的枚举类型（字符串、迭代）。单个头文件。</li>
+<li><a href="https://bitbucket.org/dwilliamson/clreflect">clReflect</a>: 使用clang的C++映射。</li>
+<li><a href="https://github.com/cpgf/cpgf">CPFG</a>: 用于反射、回调和脚本绑定的C++ 03库。</li>
+<li><a href="https://github.com/AustinBrunkhorst/CPP-Reflection">CPP-Reflection</a>: 使用clang的C++映射。</li>
+<li><a href="https://github.com/Neargye/magic_enum">Magic Enum</a>: 只包含头文件的的C++ 17库，为枚举类型（字符串、迭代）提供静态映射，可与任何枚举类型一起使用，无需任何宏或样板代码。</li>
+<li><a href="https://github.com/apolukhin/magic_get">magic_get</a>: 类似std: : tuple的方法，用于用户定义类型，无需任何宏或样板代码。</li>
+<li><a href="https://github.com/skypjack/meta">meta</a>: C++的非侵入性且无宏的运行时映射系统，只包含头文件。</li>
+<li><a href="https://github.com/Neargye/nameof">Nameof</a>: 只包含头文件的的C++ 17库，提供名称宏和函数以获取变量、类型、函数、宏和枚举的简单名称。</li>
+<li><a href="https://github.com/billyquith/ponder">Ponder</a>: C++11的映射库。</li>
+<li><a href="https://github.com/rttrorg/rttr">RTTR</a>: C++11的映射库。</li>
+<li><a href="https://github.com/cbeck88/visit_struct">visit_struct</a>: C++中用于结构域映射的微型库。</li>
+</ul>
+<h2 id="_33">正则表达式<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/VerbalExpressions/CppVerbalExpressions">CppVerbalExpressions</a>: C++正则表达式专家。</li>
+<li><a href="https://github.com/hanickadot/compile-time-regular-expressions">CTRE</a>: 编译时PCRE（几乎）兼容的正则表达式匹配器。</li>
+<li><a href="https://github.com/intel/hyperscan">Hyperscan</a>: Hyperscan是Intel的高性能、多种正则表达式匹配库，提供大量正则表达式（多达数万个）的同时匹配，通常在DPI库堆栈中使用。</li>
+<li><a href="https://github.com/kkos/oniguruma">Oniguruma</a>: 现代且灵活的正则表达式库，支持多种字符编码。</li>
+<li><a href="http://pcre.org/">PCRE</a>: 受Perl中正则表达式功能启发的正则表达式C库。</li>
+<li><a href="https://github.com/yandex/pire">PIRE</a>: Yandex的Perl不兼容正则表达式库，可以非常快（超过400 MB / s）。</li>
+<li><a href="https://github.com/google/re2">RE2</a>: 使用自动机理论、通过有限状态机进行的正则表达式软件库。</li>
+<li><a href="https://github.com/cesanta/slre">SLRE</a>: 适用于C / C++的超轻正则表达式引擎。</li>
+<li><a href="https://github.com/openresty/sregex">sregex</a>: 基于NFA / DFA的Perl兼容的正则表达式引擎库，不可回溯，可与大型数据流进行匹配。</li>
+</ul>
+<h3 id="_34">机器人学<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://moos-ivp.org/">MOOS-IvP</a>: 一组开源C++模块，提供机器人平台的自主权，尤其是自主的海洋车辆。</li>
+<li><a href="http://www.mrpt.org/">MRPT</a>: 移动机器人编程工具包。</li>
+<li><a href="https://github.com/PointCloudLibrary/pcl">PCL</a>: 点云库是一个独立的，大规模的开放项目，用于2D/3D图像和点云处理。</li>
+<li><a href="http://www.roboticslibrary.org/">Robotics Library (RL)</a>: 一个独立的C++库，包括机器人动力学，运动规划和控制。</li>
+<li><a href="http://www.robwork.dk/jrobwork/">RobWork</a>: 一组C++库的集合，用于机器人系统的仿真和控制。</li>
+<li><a href="http://wiki.ros.org/">ROS</a>: 机器人操作系统，提供了一些库和工具帮助软件开发人员创建机器人应用程序。</li>
+</ul>
+<h3 id="_35">科学计算<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/ddemidov/amgcl">AMGCL</a>: 只包含头文件的C++库，用于解决具有代数多重网格的大型稀疏线性系统。</li>
+<li><a href="http://www.fftw.org/">FFTW</a>: 用一维或者多维计算DFT的C语言库。</li>
+<li><a href="http://www.gnu.org/software/gsl/">GSL</a>: GNU科学库。</li>
+<li><a href="https://github.com/TileDB-Inc/TileDB">TileDB</a>: 快速密集和稀疏多维数组的DBMS。</li>
+<li><a href="https://github.com/trilinos/Trilinos">Trilinos</a>: 高性能的PDE解算器。</li>
+<li><a href="https://github.com/torch/torch7">Torch</a>: 科学的计算框架，广泛支持将GPU放在首位的机器学习算法。</li>
+</ul>
+<h3 id="_36">脚本<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.angelcode.com/angelscript/">AngelScript</a>: AngelScript是一种面向游戏的解释/编译脚本语言。</li>
+<li><a href="http://www.boost.org/doc/libs/1_65_1/libs/python/doc/html/index.html">Boost.Python</a>: 可实现C++和Python编程语言之间的无缝互操作性的C++库。</li>
+<li><a href="https://github.com/tbenthompson/cppimport">cppimport</a>: 直接从Python导入C++文件！</li>
+<li><a href="https://github.com/mono/CppSharp">CppSharp</a>: 用于将C / C++ API融合到高级语言中的工具和库。</li>
+<li><a href="https://github.com/ChaiScript/ChaiScript/">ChaiScript</a>: 用于C++的易于使用的嵌入式脚本语言。</li>
+<li><a href="https://github.com/taviso/ctypes.sh">ctypes.sh</a>: bash的外部函数接口。</li>
+<li><a href="https://github.com/cython/cython">Cython</a>: Cython是用于Python编程语言和扩展的Cython编程语言（基于Pyrex）的优化静态编译器。它使得为Python编写C扩展就像Python本身一样容易。</li>
+<li><a href="https://github.com/dropbox/djinni">djinni</a>: 生成跨语言类型声明和接口绑定的工具。</li>
+<li><a href="https://github.com/svaarala/duktape">Duktape</a>: 具有紧凑脚本的嵌入式Javascript引擎。</li>
+<li><a href="https://github.com/bytedeco/javacpp">JavaCpp</a>: Java和本机C++之间缺少的桥梁。</li>
+<li><a href="https://github.com/libffi/libffi">libffi</a>: 可移植的外部功能接口库。</li>
+<li><a href="http://www.lua.org/">Lua</a>: 用于配置文件和基本应用程序脚本的小型快速脚本引擎。</li>
+<li><a href="https://github.com/vinniefalco/LuaBridge">LuaBridge</a>: 轻量级、无依赖的库，用于将Lua绑定到C++。</li>
+<li><a href="https://github.com/dafrito/luacxx">luacxx</a>: 用于创建Lua绑定的C++ 11 API。</li>
+<li><a href="https://github.com/charto/nbind">nbind</a>: 神奇的头文件，使您的C++库可从JavaScript进行访问。</li>
+<li><a href="https://github.com/CopernicaMarketingSoftware/PHP-CPP">PHP-CPP</a>: 使用C++构建PHP扩展的库。</li>
+<li><a href="https://github.com/pybind/pybind11">pybind11</a>: C++ 11和Python之间的无缝可操作性。</li>
+<li><a href="https://riverbankcomputing.com/software/sip/intro">SIP</a>: 用于Python v2和v3的C或C++绑定生成器。</li>
+<li><a href="https://github.com/ThePhD/sol2">sol2</a>: 具有高级功能和一流性能的C++ &lt;-&gt; Lua API封装器。</li>
+<li><a href="http://www.swig.org/">SWIG</a>: 一个可以让你的C++代码链接到JavaScript，Perl，PHP，Python，Tcl和Ruby的包装器/接口生成器。</li>
+<li><a href="https://github.com/cesanta/v7">V7</a>: 嵌入式的JavaScript 引擎。</li>
+<li><a href="http://code.google.com/p/v8/">V8</a>: 谷歌的快速JavaScript引擎，可以被嵌入到任何C++应用程序中。</li>
+<li><a href="https://github.com/Microsoft/ChakraCore">ChakraCore</a>: Microsoft的JavaScript引擎，可以嵌入到nodejs中。</li>
+</ul>
+<h3 id="_37">序列化<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/fraillt/bitsery">Bitsery</a>: 只包含头文件的C++二进制序列化库。</li>
+<li><a href="https://github.com/Microsoft/bond">Bond</a>: 用于处理模式化数据的开源、跨平台框架。</li>
+<li><a href="https://www.boost.org/doc/libs/master/libs/serialization/doc/index.html">Boost.Serialization</a>: Boost序列化库。</li>
+<li><a href="http://kentonv.github.io/capnproto/">Cap'n Proto</a>: 快速数据交换格式和RPC系统。</li>
+<li><a href="https://github.com/USCiLab/cereal">cereal</a>: C++11 序列化库。</li>
+<li><a href="https://github.com/tplgy/cppcodec">cppcodec</a>: 只包含头文件的C++ 11库，具有一致、灵活的API来编码/解码base64，base32和hex。</li>
+<li><a href="https://github.com/google/flatbuffers">FlatBuffers</a>: 内存高效的序列化库。</li>
+<li><a href="https://github.com/msgpack/msgpack-c">MessagePack</a>: C/C++的高效二进制序列化库，例如 JSON。</li>
+<li><a href="https://github.com/mrpt/mrpt/">mrpt-serialization</a>: 已版本控制的二进制或文本格式的序列化。</li>
+<li><a href="https://github.com/nanopb/nanopb">nanopb</a>: ANSI C中的小型代码大小的协议缓冲区实现。</li>
+<li><a href="http://code.google.com/p/protobuf/">protobuf</a>: 协议缓冲，谷歌的数据交换格式。</li>
+<li><a href="https://github.com/protobuf-c/protobuf-c">protobuf-c</a>: C语言的协议缓冲实现。</li>
+<li><a href="https://github.com/real-logic/simple-binary-encoding">SimpleBinaryEncoding</a>: 用于低延迟应用程序的对二进制格式的应用程序信息的编码和解码。</li>
+<li><a href="https://github.com/protocolbuffers/upb">upb</a>: C中的小型静态库实现。</li>
+<li><a href="https://github.com/niXman/yas">YAS</a>: 非常快的序列化库，支持二进制/文本/ JSON格式。</li>
+</ul>
+<h2 id="_38">排序<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/orlp/pdqsort">pdqsort</a>: 破坏模式的快速排序。</li>
+<li><a href="https://github.com/gfx/cpp-TimSort">Timsort</a>: 模板化的稳定排序功能，其性能优于基于快速排序的算法（包括std: : sort），用于反向或半排序数据。</li>
+</ul>
+<h3 id="_39">视频<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.webmproject.org/code/">libvpx</a>: VP8/VP9编码解码SDK。</li>
+<li><a href="https://www.ffmpeg.org/">FFmpeg</a>: 一个完整的，跨平台的解决方案，用于记录，转换视频和音频流。</li>
+<li><a href="https://github.com/strukturag/libde265">libde265</a>: 开放的h.265视频编解码器的实现。</li>
+<li><a href="https://bitbucket.org/multicoreware/x265/wiki/Home">x265</a>: 开放的H.265视频编解码器实现。</li>
+<li><a href="https://github.com/cisco/openh264">OpenH264</a>: 开源H.364 编解码器。</li>
+<li><a href="http://www.theora.org/">Theora</a>: 免费开源的视频压缩格式。</li>
+<li><a href="https://github.com/twitter/vireo/">Vireo</a>: Twitter的轻量级、多功能的视频处理库。</li>
+</ul>
+<h3 id="_40">虚拟机<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/tekknolagi/carp">CarpVM</a>: C中有趣的VM，让我们一起来看看这个。</li>
+<li><a href="https://github.com/micropython/micropython">MicroPython</a>: 旨在实现单片机上Python3.x的实现。</li>
+<li><a href="https://github.com/jakogut/tinyvm">TinyVM</a>: 用纯粹的ANSI C编写的小型，快速，轻量级的虚拟机。</li>
+</ul>
+<h3 id="web">Web应用框架<a class="headerlink" href="#web" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/bel2125/civetweb">Civetweb</a>: 提供易于使用，强大的，C/C++嵌入式Web服务器，带有可选的CGI，SSL和Lua支持。</li>
+<li><a href="https://github.com/Microsoft/cpprestsdk">C++ REST SDK</a>: 使用现代异步C++ API设计、以本机代码进行基于云的客户端-服务器通信的Microsoft项目。</li>
+<li><a href="http://cppcms.com/">CppCMS</a>: 免费高性能的Web开发框架（不是 CMS）.。</li>
+<li><a href="https://github.com/ipkn/crow">Crow</a>: 一个C++微型web框架（灵感来自于Python Flask）。</li>
+<li><a href="https://github.com/cutelyst/cutelyst">Cutelyst</a>: 在Qt上构建的C++ Web框架，使用Catalyst（Perl）框架的简单方法。</li>
+<li><a href="https://github.com/an-tao/drogon">Drogon</a>: 基于C++ 14/17的高性能HTTP应用程序框架。</li>
+<li><a href="https://github.com/boazsegev/facil.io">facil.io</a>: 事件型、高性能的C Web框架，支持HTTP、WebSocket、SSE等。</li>
+<li><a href="https://kore.io/">Kore</a>: 使用C语言开发的用于web应用程序的超快速和灵活的web服务器/框架。</li>
+<li><a href="http://www.coralbits.com/libonion/">libOnion</a>: 轻量级的库，帮助你使用C编程语言创建web服务器。</li>
+<li><a href="https://github.com/lpereira/lwan">lwan</a>: 实验性、可扩展的高性能HTTP服务器。</li>
+<li><a href="https://github.com/oatpp/oatpp">oat++</a>: 轻量、零依赖的框架，可创建高性能的Web服务。</li>
+<li><a href="http://pistache.io/">Pistache</a>: Pistache是一个用纯C++ 11编写的C++ REST框架，没有外部依赖性。</li>
+<li><a href="https://github.com/jlaine/qdjango/">QDjango</a>: 使用C++编写的，基于Qt库的web框架，试图效仿Django API，因此得此名。</li>
+<li><a href="https://github.com/treefrogframework/treefrog-framework">TreeFrog Framework</a>: 基于C++和Qt的高速、全栈的Web应用程序框架，支持HTTP和WebSocket协议（带有O / R映射）。</li>
+<li><a href="http://www.webtoolkit.eu/wt">Wt</a>: 开发Web应用的C++库。</li>
+</ul>
+<h3 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">&para;</a></h3>
+<p>XML就是个垃圾，xml的解析很烦人，对于计算机它也是个灾难。这种糟糕的东西完全没有存在的理由了。-Linus Torvalds</p>
+<ul>
+<li><a href="http://www.boost.org/doc/libs/1_55_0/doc/html/property_tree.html">Boost.PropertyTree</a>: 属性树解析器/生成器，可用于解析XML / JSON / INI / Info文件。</li>
+<li><a href="http://www.libexpat.org/">Expat</a>: 用C语言编写的xml解析库。</li>
+<li><a href="http://xmlsoft.org/">Libxml2</a>: Gnome的xml C解析器和工具包。</li>
+<li><a href="http://libxmlplusplus.sourceforge.net/">libxml++</a>: C++的xml解析器。</li>
+<li><a href="https://github.com/michaelrsweet/mxml">Mini-XML</a>: 用ANSI C编写的小型XML解析库。</li>
+<li><a href="http://pugixml.org/">PugiXML</a>: 用于C++的，支持XPath的轻量级，简单快速的XML解析器。</li>
+<li><a href="http://rapidxml.sourceforge.net/">RapidXml</a>: 试图创建最快速的XML解析器，同时保持易用性，可移植性和合理的W3C兼容性。</li>
+<li><a href="http://sourceforge.net/projects/tinyxml/">TinyXML</a>: 简单小型的C++XML解析器，可以很容易地集成到其它项目中。</li>
+<li><a href="https://github.com/leethomason/tinyxml2">TinyXML2</a>: 简单快速的C++CML解析器，可以很容易集成到其它项目中。</li>
+<li><a href="https://code.google.com/p/ticpp/">TinyXML++</a>: TinyXML的一个全新的接口，使用了C++的许多许多优势，模板，异常和更好的异常处理。</li>
+<li><a href="http://xerces.apache.org/xerces-c/">Xerces-C++</a>: 用可移植的C++的子集编写的XML验证解析器。</li>
+</ul>
+<h3 id="_41">多项混杂<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
+<p>一些有用的库或者工具，但是不适合上面的分类，或者还没有分类。</p>
+<ul>
+<li><a href="https://github.com/arvidn/access_profiler">access_profiler</a>: 用于计算对c ++程序中成员变量的访问的工具。</li>
+<li><a href="http://lcamtuf.coredump.cx/afl/">American fuzzy lop</a>: a.k.a. afl-fuzz-疯狂的模糊测试工具，可在给定时间和最少示例输入的情况下自动发现错误。</li>
+<li><a href="http://bstring.sourceforge.net/">Better String</a>: C字符串库的替代方法，它功能更强大，并且没有缓冲区溢出超限问题。还包括C++封装器。</li>
+<li><a href="http://www.boost.org/doc/libs/1_56_0/doc/html/signals.html">Boost.Signals</a>: 托管信号和插槽系统的实现。</li>
+<li><a href="https://github.com/ryanhaining/cppitertools">CPPItertools</a>: 受Python内建函数和itertools库启发的基于范围的循环附加组件。</li>
+<li><a href="https://github.com/iboB/dynamix">DynaMix</a>: 允许您在运行时组成和修改对象的库。</li>
+<li><a href="https://github.com/fmtlib/fmt">{fmt}</a>: 小型、安全、快速的C++格式化库。</li>
+<li><a href="http://www.fastformat.org/">FastFormat</a>: 受log4j和Pantheios启发的快速、安全的C++格式化。</li>
+<li><a href="https://github.com/cppformat/cppformat">C++ Format</a>: C++的小型，安全和快速格式化库。</li>
+<li><a href="https://code.google.com/p/casacore/">casacore</a>: 从aips++ 派生的一系列C++核心库。</li>
+<li><a href="https://github.com/VerbalExpressions/QtVerbalExpressions">QtVerbalExpressions</a>: 该Qt库基于C++ VerbalExpressions库。</li>
+<li><a href="https://github.com/louisdx/cxx-prettyprint">cxx-prettyprint</a>: 用于C++容器的打印库。</li>
+<li><a href="https://github.com/renatoGarcia/icecream-cpp">icecream-cpp</a>: 用于调试目的的小型打印库。</li>
+<li><a href="https://github.com/leafsr/gcc-poison">gcc-poison</a>: 帮助开发人员禁止应用程序中的不安全的C/C++函数的简单的头文件。</li>
+<li><a href="https://github.com/gracicot/kangaru">Kangaru</a>: 用于C++ 11和C++ 14的依赖注入容器。</li>
+<li><a href="https://github.com/attractivechaos/klib">Klib</a>: 通用算法和数据结构的小型、轻量级实现。</li>
+<li><a href="http://libsigc.sourceforge.net/">libsigc++</a>: 用于标准C++的类型安全的回调系统。</li>
+<li><a href="http://code.google.com/p/googlemock/">googlemock</a>: 编写和使用C++模拟类的库。</li>
+<li><a href="https://github.com/joyent/http-parser">HTTP Parser</a>: C的http请求/响应解析器。</li>
+<li><a href="https://github.com/anrieff/libcpuid">libcpuid</a>: 用于x86 CPU检测盒特征提取的小型C库。</li>
+<li><a href="https://github.com/avati/libevil">libevil</a>: 许可证管理器</li>
+<li><a href="https://github.com/keybuk/libnih">libnih</a>: C函数和结构的轻量级库。</li>
+<li><a href="http://www.libusb.org/">libusb</a>: 允许移动访问USB设备的通用USB库。</li>
+<li><a href="https://github.com/solodon4/Mach7">Mach7</a>: C++的模式匹配库。</li>
+<li><a href="https://github.com/mandreyel/mio">mio</a>: 用于内存映射文件IO的跨平台C++ 11库，只包含头文件。</li>
+<li><a href="https://github.com/taocpp/PEGTL">PEGTL</a>: 解析表达语法模板库。</li>
+<li><a href="http://pcre.org/">PCRE</a>: 正则表达式C库，灵感来自于Perl中正则表达式的功能。</li>
+<li><a href="http://www.deltavsoft.com/">Remote Call Framework</a>: C++的进程间通信框架。</li>
+<li><a href="http://scintilla.org/">Scintilla</a>: 开源的代码编辑控件。</li>
+<li><a href="https://github.com/wjwwood/serial">Serial Communication Library</a>: C++语言编写的跨平台，串口库。</li>
+<li><a href="https://github.com/antirez/sds">SDS</a>: C的简单动态字符串库。</li>
+<li><a href="https://github.com/h2non/semver.c">semver.c</a>: semver解析器，在ANSI C中呈现。</li>
+<li><a href="https://github.com/wjwwood/serial">Serial Communication Library</a>: 跨平台，用C++编写的串行端口库。</li>
+<li><a href="http://sigslot.sourceforge.net/">sigslot</a>: C++信号/插槽库。</li>
+<li><a href="https://github.com/larspensjo/SimpleSignal">SimpleSignal</a>: 高性能C++ 11信号。</li>
+<li><a href="https://github.com/rtv/Stage">Stage</a>: 移动机器人模拟器。</li>
+<li><a href="https://github.com/jeaye/stdman">stdman</a>: 格式化的C++ 11/14 stdlib手册页（来自cppreference）。</li>
+<li><a href="https://github.com/nothings/stb">stb</a>: 一系列用于C / C++的单文件库。</li>
+<li><a href="http://www.partow.net/programming/strtk/index.html">StrTk</a>: 由高性能字符串处理例程组成的C++库。</li>
+<li><a href="https://tulipindicators.org/">Tulip Indicators</a>: 超过100种财务技术分析指标的C库。</li>
+<li><a href="https://github.com/regehr/ub-canaries">ub-canaries</a>: 一组C / C++程序，它们试图使编译器开发未定义的行为。</li>
+<li><a href="https://github.com/jeaye/value-category-cheatsheet">value-category-cheatsheet</a>: 用于lvalue、rvalue等的PDF快捷键管理。</li>
+<li><a href="https://code.google.com/p/vartypes/">VarTypes</a>: C++/Qt4功能丰富，面向对象的管理变量的框架。</li>
+<li><a href="http://zbar.sourceforge.net/">ZBar</a>: ‘条形码扫描器’库，可以扫描照片，图片和视频流中的条形码，并返回结果。</li>
+<li><a href="https://github.com/zxing/zxing/">ZXing</a>: 用Java实现的开源、多格式1D / 2D条码图像处理库，带有其他语言的端口。</li>
+<li><a href="https://github.com/p-ranav/pprint">pprint</a>: 适用于现代C++的Pretty Printer。</li>
+</ul>
+<h3 id="_42">软件<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<p>用于创建开发环境的软件</p>
+<h3 id="_43">编译器<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<p>C/C++编译器列表</p>
+<ul>
+<li><a href="https://github.com/rui314/8cc">8cc</a>: 小型C编译器。</li>
+<li><a href="https://github.com/ryanmjacobs/c">c</a>: 一次编译并执行C“脚本”！</li>
+<li><a href="http://clang.llvm.org/">Clang</a>: LLVM的C编译器，支持C++ 11/14 / 1z C11，由LLVM团队开发。</li>
+<li><a href="https://gcc.gnu.org/">GCC</a>: GNU编译器集合，支持C++ 11/14 / 1z C11和OpenMP。</li>
+<li><a href="http://pcc.ludd.ltu.se/">PCC</a>: 非常老的C编译器，支持C99。</li>
+<li><a href="https://software.intel.com/en-us/c-compilers">Intel C++ Compiler</a>: 由英特尔公司开发。</li>
+<li><a href="http://llvm.org/">LLVM</a>: 模块化和可重用编译器和工具链技术的集合。</li>
+<li><a href="http://msdn.microsoft.com/en-us/vstudio/hh386302.aspx">Microsoft Visual C++</a>: MSVC，由微软公司开发。</li>
+<li><a href="http://www.openwatcom.org/index.php/Main_Page">Open WatCom</a>: Watcom，C，C++和Fortran交叉编译器和工具。</li>
+<li><a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/overview/index.html">Oracle Solaris Studio</a>: 适用于SPARC和x86的C、C++和Fortran编译器，支持C++ 11 ，在Linux和Solaris上可用。</li>
+<li><a href="http://bellard.org/tcc/">TCC</a>: 轻量级的C语言编译器。</li>
+</ul>
+<h3 id="_44">在线编译器<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
+<p>在线C/C++编译器列表</p>
+<ul>
+<li><a href="http://codepad.org/">codepad</a>: 在线编译器/解释器，一个简单的协作工具</li>
+<li><a href="http://coliru.stacked-crooked.com/">coliru</a>: 在线编译器/ shell，支持各种C++编译器。</li>
+<li><a href="http://gcc.godbolt.org/">Compiler Explorer</a>: 具有编译输出的交互式编译器。</li>
+<li><a href="http://www.tutorialspoint.com/codingground.htm">CompileOnline</a>: 在Linux上在线编译和执行C++。</li>
+<li><a href="http://ideone.com/">Ideone</a>: 在线编译器和调试工具，可编译源代码并以60多种编程语言在线执行。</li>
+<li><a href="https://repl.it/">repl.it</a>: 针对教育者、学习者和开发人员的功能强大而简单的工具和平台。</li>
+<li><a href="http://rextester.com/runcode">Rextester</a>: 在线编译器，提供几个编译器（Clang，GCC，MSVC）和几个编辑器。</li>
+<li><a href="https://tio.run/">Try It Online</a>: TIO是一系列在线解释器，可用于越来越多的实用和休闲的编程语言。</li>
+<li><a href="http://melpon.org/wandbox/">Wandbox</a>: 具有Boost的在线Clang / GCC编译器。</li>
+<li><a href="https://paiza.io/en">paiza.io</a>: 具有多个文件支持功能、Github（gist）集成和协作编辑的在线C / C++编译器。</li>
+</ul>
+<h3 id="_45">调试器<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
+<p>C/C++调试器列表</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_debuggers">Comparison of debuggers</a>: 来自维基百科的调试器列表。</li>
+<li><a href="https://www.gnu.org/software/gdb">GDB</a>: GNU调试器。</li>
+<li><a href="http://lldb.llvm.org/">LLDB</a>: LLDB调试器。</li>
+<li><a href="https://metashell.readthedocs.org/">Metashell</a>: 交互式模板元程序设计，其中包括MDB metadebugger。</li>
+<li><a href="http://valgrind.org/">Valgrind</a>: 内存调试，内存泄露检测，性能分析工具。</li>
+<li><a href="http://x64dbg.com/">x64dbg</a>: Windows的开源x64 / x32调试器。</li>
+</ul>
+<h3 id="_46">集成开发环境<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h3>
+<p>C/C++集成开发环境列表</p>
+<ul>
+<li><a href="http://anjuta.org/">Anjuta DevStudio</a>: GNOME IDE。</li>
+<li><a href="http://www.jetbrains.com/objc/">AppCode</a>: 构建与JetBrains’ IntelliJ IDEA 平台上的用于Objective-C，C,C++，Java和Java开发的集成开发环境。</li>
+<li><a href="https://www.cevelop.com/">Cevelop</a>: 基于Eclipse CDT的跨平台C和C++ IDE，带有其他插件。</li>
+<li><a href="http://www.jetbrains.com/clion/">CLion</a>: 来自JetBrains的跨平台的C/C++的集成开发环境。</li>
+<li><a href="http://www.codeblocks.org/">Code::Blocks</a>: 免费C，C++和Fortran的集成开发环境。</li>
+<li><a href="http://codelite.org/">CodeLite</a>: 另一个跨平台的免费的C/C++集成开发环境。</li>
+<li><a href="https://github.com/jeaye/color_coded">color_coded</a>: 用于基于libclang的vim插件。</li>
+<li><a href="http://sourceforge.net/projects/orwelldevcpp/">Dev-C++</a>: 可移植的C/C++/C++11集成开发环境。</li>
+<li><a href="http://www.eclipse.org/cdt/">Eclipse CDT</a>: 基于Eclipse平台的功能齐全的C和C++集成开发环境。</li>
+<li><a href="http://www.geany.org/">Geany</a>: 轻量级的快速，跨平台的集成开发环境。</li>
+<li><a href="http://www-03.ibm.com/software/products/en/visgen">IBM VisualAge</a>: 来自IBM的家庭计算机集成开发环境。</li>
+<li><a href="https://github.com/Sarcasm/irony-mode">Irony-mode</a>: 由libclang驱动的用于Emacs的C/C++微模式。</li>
+<li><a href="https://www.kdevelop.org/">KDevelop</a>: 免费开源集成开发环境。</li>
+<li><a href="http://www.visualstudio.com/">Microsoft Visual Studio</a>: 来自微软的集成开发环境。</li>
+<li><a href="https://code.visualstudio.com/">Microsoft Visual Studio Code</a>: Microsoft提供的开源IDE。</li>
+<li><a href="https://netbeans.org/">NetBeans</a>: 主要用于Java开发的的集成开发环境，也支持其他语言，尤其是PHP，C/C++和HTML5。</li>
+<li><a href="http://qt-project.org/">Qt Creator</a>: 跨平台的C++，Javascript和QML集成开发环境，也是Qt SDK的一部分。</li>
+<li><a href="https://github.com/Andersbakken/rtags">rtags</a>: C/C++的客户端服务器索引，用于 跟基于clang的emacs的集成。</li>
+<li><a href="https://developer.apple.com/xcode/">Xcode</a>: 由苹果公司开发。</li>
+<li><a href="https://valloric.github.io/YouCompleteMe/">YouCompleteMe</a>: 一个用于Vim的根据你敲的代码快速模糊搜索并进行代码补全的引擎。</li>
+<li><a href="https://github.com/cquery-project/cquery/">cquery</a>: 用于vscode，emacs，vim等的C++代码完成引擎。</li>
+</ul>
+<h3 id="_47">构建系统<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://bazel.build/">Bazel</a>: Google提供的多语言、快速且可扩展的构建系统。</li>
+<li><a href="https://github.com/rizsotto/Bear">Bear</a>: 用于为clang工具生成编译数据库的工具。</li>
+<li><a href="https://github.com/facebook/buck">Buck</a>: 用Java编写的快速构建系统，可鼓励在多种平台和语言（包括在Facebook开发和使用的C++）上创建小型、可重用模块。</li>
+<li><a href="https://github.com/clibs/clib">clib</a>: C语言的软件包管理器。</li>
+<li><a href="https://www.biicode.com/">Biicode</a>: 基于文件的简单依赖管理器。</li>
+<li><a href="http://www.cmake.org/">CMake</a>: 跨平台的免费开源软件用于管理软件使用独立编译的方法进行构建的过程。</li>
+<li><a href="https://github.com/pfultz2/cget">Cget</a>: Cmake软件包检索。</li>
+<li><a href="https://conan.io/">Conan</a>: C / C++程序包管理器，开源的。</li>
+<li><a href="https://github.com/iauns/cpm">CPM</a>: 基于CMake和Git的C++包管理器。</li>
+<li><a href="http://www.fastbuild.org/docs/home.html">FASTBuild</a>: 高性能，开源的构建系统，支持高度可扩展性的编译，缓冲和网络分布。</li>
+<li><a href="https://www.github.com/ruslo/hunter">Hunter</a>: CMake驱动的C++跨平台软件包管理器。</li>
+<li><a href="http://mesonbuild.com/">MesonBuild</a>: 开源构建系统，它意味着不仅要非常快，而且更重要的是要尽可能地方便用户使用。</li>
+<li><a href="http://martine.github.io/ninja/">Ninja</a>: 专注于速度的小型构建系统。</li>
+<li><a href="http://www.scons.org/">Scons</a>: 使用Python scipt 配置的软件构建工具。</li>
+<li><a href="http://www.sconsolidator.com/">Sconsolidator</a>: 用于Eclipse CDT的Scons构建系统集成。</li>
+<li><a href="https://spack.io/">Spack</a>: 灵活的软件包管理器，支持多个版本、配置、平台和编译器。</li>
+<li><a href="https://software-network.org/">SW</a>: 跨平台的C++（和其他语言）构建系统和程序包管理器，其中包含许多可用程序包。</li>
+<li><a href="https://github.com/deplinenoise/tundra">tundra</a>: 高性能的代码构建系统，甚至对于非常大型的软件项目，也能提供最好的增量构建次数。</li>
+<li><a href="http://gittup.org/tup/">tup</a>: 基于文件的构建系统，用于后台监控变化的文件。</li>
+<li><a href="http://premake.github.io/">Premake</a>: 配置有Lua脚本的工具，可以在Windows、Mac OS X和Linux上为Visual Studio、GNU Make、Xcode、Code::Blocks等生成项目文件。</li>
+<li><a href="https://github.com/microsoft/vcpkg">Vcpkg</a>: Windows，Linux和MacOS的C++库管理器。</li>
+<li><a href="https://github.com/waf-project/waf">waf</a>: 用于配置、编译和安装应用程序的基于Python的框架。</li>
+<li><a href="https://xmake.io/">XMake</a>: 基于Lua的C / C++的跨平台构建实用程序。</li>
+</ul>
+<h3 id="_48">静态代码分析<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
+<p>提高质量，减少瑕疵的代码分析工具列表</p>
+<ul>
+<li><a href="http://cppcheck.sourceforge.net/">Cppcheck</a>: 静态C/C++代码分析工具</li>
+<li><a href="https://www.cppdepend.com/">CppDepend</a>: 通过分析和可视化代码依赖关系，定义设计规则，进行影响分析以及比较不同版本的代码，简化了对复杂C / C++代码库的管理。</li>
+<li><a href="https://github.com/cpplint/cpplint">cpplint</a>: 遵循Google C++样式指南的C++样式检查器。</li>
+<li><a href="http://www.viva64.com/en/pvs-studio/">PVS-Studio</a>: 用C、C++和C＃编写的在程序源代码中进行bug检测的工具。</li>
+<li><a href="https://github.com/tomtom-international/cpp-dependencies">cpp-dependencies</a>: 检查C++ #include依赖关系的工具（以.dot格式创建的依赖关系图）。</li>
+<li><a href="https://code.google.com/p/include-what-you-use/">include-what-you-use</a>: 使用clang进行代码分析的工具，可以#include在C和C++文件中。</li>
+<li><a href="https://github.com/facebook/infer">Infer</a>: 用于Java、C和Objective-C的静态分析器。</li>
+<li><a href="http://oclint.org/">OCLint</a>: 用于C、C++和Objective-C的静态源代码分析工具，用于提高质量，减少瑕疵。</li>
+<li><a href="http://clang-analyzer.llvm.org/index.html">Clang Static Analyzer</a>: 查找C、C++和Objective-C程序bug的源代码分析工具。</li>
+<li><a href="http://linticator.com/">Linticator</a>: Pc-/FlexeLint的Eclipse CDT集成。</li>
+<li><a href="https://github.com/NASA-SW-VnV/ikos">IKOS</a>: 基于抽象解释理论的C / C++静态分析器。</li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis#C.2FC.2B.2B">List of tools for static code analysis</a>: 来自维基百科的静态代码分析工具列表。</li>
+</ul>
+<h2 id="_49">编码样式工具<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://astyle.sourceforge.net/">Artistic Style</a>: 格式化C / C++ / C＃/ Obj-C / Java代码的工具。也称为astyle。</li>
+<li><a href="http://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a>: 格式化C / C++ / Obj-C代码的工具。</li>
+<li><a href="http://clang.llvm.org/extra/clang-tidy.html">Clang-Tidy</a>: 基于Clang的C++ linter工具。</li>
+<li><a href="https://editorconfig.org/">EditorConfig</a>: EditorConfig帮助在不同的编辑器和IDE之间维护一致的编码样式</li>
+<li><a href="https://github.com/uncrustify/uncrustify">Uncrustify</a>: 代码美化器。</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      王进钊 CC-BY-4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/674354104" target="_blank" rel="noopener" title="Bilibili | 王进钊" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/zhaozhao626" target="_blank" rel="noopener" title="GitHub | zhaozhao626" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "navigation.path"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>
