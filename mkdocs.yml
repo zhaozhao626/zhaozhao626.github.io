@@ -18,6 +18,8 @@ nav:
     - ALGORITHM/链表.md
     - ALGORITHM/哈希表.md
     - ALGORITHM/字符串.md
+    - ALGORITHM/二叉树.md
+    - ALGORITHM/二叉树2.md
     
   - 博客:
     - BLOG/index.md
