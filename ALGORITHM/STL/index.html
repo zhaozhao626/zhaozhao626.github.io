@@ -1,0 +1,3069 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="王进钊的个人网站">
+      
+      
+        <meta name="author" content="王进钊">
+      
+      
+        <link rel="canonical" href="https://zhaozhao626.github.io/ALGORITHM/STL/">
+      
+      
+        <link rel="prev" href="../ACM%E6%A8%A1%E5%BC%8F%E5%90%84%E7%A7%8D%E8%BE%93%E5%85%A5%E6%80%BB%E7%BB%93C%2B%2B%E7%89%88/">
+      
+      
+        <link rel="next" href="../%E6%95%B0%E7%BB%84/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>STL - 王进钊的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stl" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="王进钊的个人网站" class="md-header__button md-logo" aria-label="王进钊的个人网站" data-md-component="logo">
+      
+  <img src="../../assets/icon_512.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            王进钊的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              STL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/zhaozhao626/zhaozhao626.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zhaozhao626.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../LECTURE/" class="md-tabs__link">
+          
+  
+    
+  
+  讲稿
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../COURSE/" class="md-tabs__link">
+          
+  
+    
+  
+  课程学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/" class="md-tabs__link">
+          
+  
+    
+  
+  算法学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../BLOG/" class="md-tabs__link">
+          
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ACADEMIC/" class="md-tabs__link">
+          
+  
+    
+  
+  学术
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DEV/" class="md-tabs__link">
+          
+  
+    
+  
+  开发
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../WEBSITE/" class="md-tabs__link">
+          
+  
+    
+  
+  网站
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ESSAY/" class="md-tabs__link">
+          
+  
+    
+  
+  随笔
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ME/" class="md-tabs__link">
+          
+  
+    
+  
+  我
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="王进钊的个人网站" class="md-nav__button md-logo" aria-label="王进钊的个人网站" data-md-component="logo">
+      
+  <img src="../../assets/icon_512.png" alt="logo">
+
+    </a>
+    王进钊的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zhaozhao626/zhaozhao626.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    zhaozhao626.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../LECTURE/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    讲稿
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            讲稿
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../COURSE/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    课程学习
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../英语学习" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    算法学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            算法学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AF%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    算法笔记算法基础篇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    算法模板
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ACM%E6%A8%A1%E5%BC%8F%E5%90%84%E7%A7%8D%E8%BE%93%E5%85%A5%E6%80%BB%E7%BB%93C%2B%2B%E7%89%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ACM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    STL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    STL
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stl_1" class="md-nav__link">
+    STL组件
+  </a>
+  
+    <nav class="md-nav" aria-label="STL组件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    容器（Containers）
+  </a>
+  
+    <nav class="md-nav" aria-label="容器（Containers）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    容器提供的操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterators" class="md-nav__link">
+    迭代器（Iterators）：
+  </a>
+  
+    <nav class="md-nav" aria-label="迭代器（Iterators）：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    迭代器种类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithms" class="md-nav__link">
+    算法（Algorithms）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functors" class="md-nav__link">
+    函数对象（Functors）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adapters" class="md-nav__link">
+    适配器（Adapters）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocators" class="md-nav__link">
+    分配器（Allocators）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    其他工具和辅助类：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    容器和容器适配器
+  </a>
+  
+    <nav class="md-nav" aria-label="容器和容器适配器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containers_1" class="md-nav__link">
+    容器（Containers）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-adapters" class="md-nav__link">
+    容器适配器（Container Adapters）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    区别总结：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E7%BB%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%93%BE%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    链表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%93%88%E5%B8%8C%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    哈希表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    字符串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    栈和队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BA%8C%E5%8F%89%E6%A0%91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二叉树1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BA%8C%E5%8F%89%E6%A0%912/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二叉树2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    回溯算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../BLOG/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            博客
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/others/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    优质博客链接
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    机器学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            机器学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Machinelearning/%E5%86%B3%E7%AD%96%E6%A0%91%E5%92%8C%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    决策树和随机森林
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/C%2B%2B/C%2B%2B%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++学习
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/C%2B%2B/C%2B%2B%E8%B5%84%E6%BA%90%E6%80%BB%E7%BB%93/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++ 资源总结
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/C%2B%2B/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%BB%83%E4%B9%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    输入输出练习
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CV
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            CV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/CV/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%9A%84%E5%A4%A7%E4%B8%80%E7%BB%9F%E4%B9%8B%E8%B7%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    多模态的大一统之路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/OS/fork-exec-spawn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fork/exec/spawn 辨析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/OS/fork-example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fork 例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Linux/vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim 学习笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Linux/tmux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tmux 使用指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Linux/unix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unix and Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Linux/kernel-compile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux 内核编译尝试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Linux/pi-start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    树莓派入门指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GitHub
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            GitHub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/GitHub/mirror/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub 镜像到 Gitee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Markdown/grammars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown 语法学习 精简版
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Markdown/mkdocs-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publish a Website with Material for MkDocs and GitHub Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Markdown/mdbook-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publish a Website with mdBook and GitHub Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Markdown/github-pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    基础
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10_1" >
+        
+          <label class="md-nav__link" for="__nav_4_10_1" id="__nav_4_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    网络
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Network/learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机网络 总结
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/Network/nouns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机网络 专有名词速查
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        
+          <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    装机知识
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            装机知识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BLOG/pcDIY/diy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    装机知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ACADEMIC/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    学术
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            学术
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../DEV/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    开发
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            开发
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../WEBSITE/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    网站
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_7">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            网站
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEBSITE/build/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEBSITE/help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文章编写帮助
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEBSITE/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    测试文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WEBSITE/AcadHomepage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AcadHomepage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ESSAY/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    随笔
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            随笔
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ME/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    我
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            我
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stl_1" class="md-nav__link">
+    STL组件
+  </a>
+  
+    <nav class="md-nav" aria-label="STL组件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    容器（Containers）
+  </a>
+  
+    <nav class="md-nav" aria-label="容器（Containers）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    容器提供的操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterators" class="md-nav__link">
+    迭代器（Iterators）：
+  </a>
+  
+    <nav class="md-nav" aria-label="迭代器（Iterators）：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    迭代器种类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithms" class="md-nav__link">
+    算法（Algorithms）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functors" class="md-nav__link">
+    函数对象（Functors）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adapters" class="md-nav__link">
+    适配器（Adapters）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocators" class="md-nav__link">
+    分配器（Allocators）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    其他工具和辅助类：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    容器和容器适配器
+  </a>
+  
+    <nav class="md-nav" aria-label="容器和容器适配器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containers_1" class="md-nav__link">
+    容器（Containers）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-adapters" class="md-nav__link">
+    容器适配器（Container Adapters）：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    区别总结：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/zhaozhao626/zhaozhao626.github.io/edit/main/docs/ALGORITHM/STL.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="stl">STL<a class="headerlink" href="#stl" title="Permanent link">&para;</a></h1>
+<p>STL（Standard Template Library）是C++标准库的一部分，它包含了一组通用的模板类和函数，用于实现常见的数据结构和算法。STL的目标是提供高效、可重用和通用的数据结构和算法，以便C++程序员可以更轻松地编写高质量的代码。</p>
+<h2 id="stl_1">STL组件<a class="headerlink" href="#stl_1" title="Permanent link">&para;</a></h2>
+<h3 id="containers"><strong>容器（Containers）</strong><a class="headerlink" href="#containers" title="Permanent link">&para;</a></h3>
+<p>在C++的STL（Standard Template Library）中，容器（Containers）是一组模板类，用于存储和管理数据。不同类型的容器提供了不同的数据结构和操作，以满足各种不同的需求。以下是C++ STL中常见的容器：</p>
+<ol>
+<li>
+<p><strong>std::vector</strong>：</p>
+<ul>
+<li>动态数组，支持快速的随机访问。</li>
+<li>允许在尾部插入和删除元素，但在中间或开头插入/删除较慢。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::list</strong>：</p>
+<ul>
+<li>双向链表，支持快速的插入和删除操作。</li>
+<li>不支持随机访问，必须通过迭代器来遍历元素。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::deque</strong>（双端队列）：</p>
+<ul>
+<li>双端队列，支持在头部和尾部高效地插入和删除元素。</li>
+<li>支持随机访问，比<code>std::vector</code>稍微复杂。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::set</strong>：</p>
+<ul>
+<li>有序集合，存储唯一的元素，并自动按键值排序。</li>
+<li>插入、删除、查找的平均时间复杂度为O(log n)。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::map</strong>：</p>
+<ul>
+<li>有序映射，存储键值对，并自动按键排序。</li>
+<li>插入、删除、查找的平均时间复杂度为O(log n)。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::unordered_set</strong>：</p>
+<ul>
+<li>无序集合，存储唯一的元素，使用哈希表实现。</li>
+<li>插入、删除、查找的平均时间复杂度为O(1)。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::unordered_map</strong>：</p>
+<ul>
+<li>无序映射，存储键值对，使用哈希表实现。</li>
+<li>插入、删除、查找的平均时间复杂度为O(1)。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::stack</strong>：</p>
+<ul>
+<li>栈容器适配器，通常基于其他容器（如<code>std::deque</code>）实现。</li>
+<li>提供栈的操作，如<code>push</code>、<code>pop</code>、<code>top</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::queue</strong>：</p>
+<ul>
+<li>队列容器适配器，通常基于其他容器（如<code>std::deque</code>）实现。</li>
+<li>提供队列的操作，如<code>push</code>、<code>pop</code>、<code>front</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>std::priority_queue</strong>：</p>
+<ul>
+<li>优先队列容器适配器，通常基于其他容器（如<code>std::vector</code>）实现。</li>
+<li>用于实现最大堆或最小堆，支持插入和获取最值操作。</li>
+</ul>
+</li>
+</ol>
+<p>这些容器提供了不同的性能和使用场景，你可以根据具体的需求来选择使用哪种容器。STL中的容器是模板类，因此可以存储各种类型的数据，使其非常灵活和通用。容器的使用可以极大地简化数据管理和操作的过程。</p>
+<h4 id="_1">容器提供的操作<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>如果需要高效的随机访问元素，可以选择顺序容器；如果需要按照键来查找元素，可以选择关联容器；如果需要在任何位置插入和删除元素，可以选择序列容器。</p>
+<p>STL（Standard Template Library）中的各种容器提供了一系列操作接口，这些接口允许你对容器中的数据进行插入、删除、访问、搜索等操作。以下是常见容器提供的一些常用操作接口：</p>
+<ol>
+<li><strong>插入操作</strong>：</li>
+<li><code>insert</code>：在容器中插入一个或多个元素。</li>
+<li><code>push_back</code>：在容器尾部插入一个元素（仅适用于序列容器）。</li>
+<li><code>push_front</code>：在容器头部插入一个元素（仅适用于序列容器和双端队列）。</li>
+<li><strong>删除操作</strong>：</li>
+<li><code>erase</code>：删除容器中一个或多个元素。</li>
+<li><code>pop_back</code>：删除容器尾部的一个元素（仅适用于序列容器）。</li>
+<li><code>pop_front</code>：删除容器头部的一个元素（仅适用于序列容器和双端队列）。</li>
+<li><code>clear</code>：清空容器中的所有元素。</li>
+<li><strong>访问操作</strong>：</li>
+<li><code>at</code>：访问指定位置的元素，会进行边界检查。</li>
+<li><code>operator[]</code>：通过下标访问元素，不进行边界检查。</li>
+<li><code>front</code>：返回容器中的第一个元素。</li>
+<li><code>back</code>：返回容器中的最后一个元素。</li>
+<li><strong>大小和容量查询</strong>：</li>
+<li><code>size</code>：返回容器中的元素数量。</li>
+<li><code>empty</code>：检查容器是否为空。</li>
+<li><code>max_size</code>：返回容器可能容纳的最大元素数量。</li>
+<li><code>capacity</code>：返回容器的当前容量（仅适用于某些容器，如<code>std::vector</code>）。</li>
+<li><strong>查找操作</strong>：</li>
+<li><code>find</code>：在容器中查找指定元素，并返回第一个匹配的位置。</li>
+<li><code>count</code>：统计容器中等于指定元素的个数。</li>
+<li><code>lower_bound</code>：返回首个不小于指定元素的迭代器。</li>
+<li><code>upper_bound</code>：返回首个大于指定元素的迭代器。</li>
+<li><code>equal_range</code>：返回一个范围，包含所有等于指定元素的元素。</li>
+<li><strong>迭代器</strong>：</li>
+<li><code>begin</code>：返回指向容器第一个元素的迭代器。</li>
+<li><code>end</code>：返回指向容器尾部（末尾元素的下一个位置）的迭代器。</li>
+<li><code>rbegin</code>：返回反向迭代器，指向容器最后一个元素。</li>
+<li><code>rend</code>：返回反向迭代器，指向容器第一个元素的前一个位置。</li>
+<li><strong>排序操作</strong>（仅适用于关联容器，如<code>std::set</code>和<code>std::map</code>）：</li>
+<li><code>begin</code>：返回指向容器第一个元素的迭代器。</li>
+<li><code>end</code>：返回指向容器尾部（末尾元素的下一个位置）的迭代器。</li>
+</ol>
+<h3 id="iterators"><strong>迭代器（Iterators）</strong>：<a class="headerlink" href="#iterators" title="Permanent link">&para;</a></h3>
+<p>迭代器是用于遍历容器中元素的通用接口。STL定义了多种类型的迭代器，如输入迭代器、输出迭代器、前向迭代器、双向迭代器和随机访问迭代器，以适应不同类型的容器和操作。</p>
+<p>迭代器（Iterators）是C++ STL（Standard Template Library）中的一种通用机制，用于遍历容器中的元素。迭代器是一种抽象的概念，它提供了对容器中元素的访问和遍历方式，使得你可以在不关心容器的内部结构的情况下访问容器中的数据。不同类型的容器提供了不同类型的迭代器，但所有迭代器都共享一组通用的操作接口。</p>
+<p>STL中常见的迭代器操作接口包括以下几种：</p>
+<ol>
+<li><strong>迭代器的移动</strong>：</li>
+<li><code>operator++</code>：前置自增，将迭代器移动到下一个元素。</li>
+<li>
+<p><code>operator--</code>：前置自减，将迭代器移动到前一个元素。</p>
+</li>
+<li>
+<p><strong>迭代器的访问</strong>：</p>
+</li>
+<li><code>operator*</code>：获取当前迭代器指向的元素的引用。</li>
+<li>
+<p><code>operator-&gt;</code>：通过迭代器获取当前元素的成员（通常在容器元素为对象时使用）。</p>
+</li>
+<li>
+<p><strong>比较操作</strong>：</p>
+</li>
+<li><code>operator==</code>：比较两个迭代器是否相等。</li>
+<li>
+<p><code>operator!=</code>：比较两个迭代器是否不相等。</p>
+</li>
+<li>
+<p><strong>迭代器的移动和访问组合</strong>：</p>
+</li>
+<li><code>operator++(int)</code>：后置自增，将迭代器移动到下一个元素，并返回移动前的位置。</li>
+<li>
+<p><code>operator--(int)</code>：后置自减，将迭代器移动到前一个元素，并返回移动前的位置。</p>
+</li>
+<li>
+<p><strong>随机访问迭代器特有的操作</strong>（仅适用于支持随机访问的容器，如<code>std::vector</code>）：</p>
+</li>
+<li><code>operator+</code>：将迭代器向前移动指定的步数。</li>
+<li><code>operator-</code>：将迭代器向后移动指定的步数。</li>
+<li><code>operator+=</code>：将迭代器向前移动指定的步数。</li>
+<li><code>operator-=</code>：将迭代器向后移动指定的步数。</li>
+<li>
+<p><code>operator[]</code>：通过偏移量访问容器中的元素。</p>
+</li>
+<li>
+<p><strong>其他操作</strong>：</p>
+</li>
+<li><code>std::distance</code>：计算两个迭代器之间的距离。</li>
+<li><code>std::advance</code>：将迭代器前进或后退指定的步数。</li>
+</ol>
+<p>不同类型的容器支持不同类型的迭代器。例如，顺序容器（如<code>std::vector</code>、<code>std::list</code>）通常支持双向迭代器，而顺序容器（如<code>std::vector</code>）还支持随机访问迭代器。关联容器（如<code>std::set</code>、<code>std::map</code>）通常支持双向迭代器。</p>
+<h4 id="_2">迭代器种类<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>C++ STL中的迭代器分为五个主要类别，它们具有不同的特性和能力，分别是：输入迭代器、输出迭代器、前向迭代器、双向迭代器和随机访问迭代器。这些迭代器类别代表了迭代器的功能级别，从最基本的输入和输出到最高级的随机访问。</p>
+<p>以下是每个迭代器类别的主要特点和用途：</p>
+<ol>
+<li><strong>输入迭代器（Input Iterator）</strong>：</li>
+<li>输入迭代器用于遍历容器中的元素并支持读取元素值。</li>
+<li>主要用途是从容器中读取数据，通常只支持单次遍历。</li>
+<li>示例容器：<code>std::vector</code>、<code>std::list</code>、<code>std::set</code>等。</li>
+<li>示例操作：<code>*it</code>（读取元素值）和 <code>it++</code>（后置自增）。</li>
+<li><strong>输出迭代器（Output Iterator）</strong>：</li>
+<li>输出迭代器用于遍历容器中的元素并支持写入元素值。</li>
+<li>主要用途是向容器中写入数据，通常只支持单次遍历。</li>
+<li>示例容器：<code>std::vector</code>、<code>std::list</code>、<code>std::set</code>等。</li>
+<li>示例操作：<code>*it</code>（写入元素值）和 <code>it++</code>（后置自增）。</li>
+<li><strong>前向迭代器（Forward Iterator）</strong>：</li>
+<li>前向迭代器是输入迭代器和输出迭代器的进一步扩展，它支持多次遍历和写入。</li>
+<li>主要用途是支持多次遍历和写入，通常用于单向链表等数据结构。</li>
+<li>示例容器：<code>std::forward_list</code>等。</li>
+<li>示例操作：<code>*it</code>（读取或写入元素值）和 <code>it++</code>（后置自增）。</li>
+<li><strong>双向迭代器（Bidirectional Iterator）</strong>：</li>
+<li>双向迭代器扩展了前向迭代器的功能，它支持向前和向后遍历元素。</li>
+<li>主要用途是支持双向遍历，通常用于双向链表等数据结构。</li>
+<li>示例容器：<code>std::list</code>等。</li>
+<li>示例操作：<code>*it</code>（读取或写入元素值）、<code>it++</code>（后置自增）和 <code>it--</code>（后置自减）。</li>
+<li><strong>随机访问迭代器（Random Access Iterator）</strong>：</li>
+<li>随机访问迭代器是功能最强大的迭代器，它支持随机访问元素，具有常数时间的复杂度。</li>
+<li>主要用途是支持随机访问，通常用于数组等数据结构。</li>
+<li>示例容器：<code>std::vector</code>等。</li>
+<li>示例操作：<code>*it</code>（读取或写入元素值）、<code>it++</code>（后置自增）、<code>it--</code>（后置自减）、<code>it + n</code>（随机访问）等。</li>
+</ol>
+<h3 id="algorithms"><strong>算法（Algorithms）</strong>：<a class="headerlink" href="#algorithms" title="Permanent link">&para;</a></h3>
+<p>STL提供了大量的通用算法，如排序、查找、复制、转换、合并等，这些算法可以在各种容器上进行操作，使得开发人员无需自己实现这些常见的操作。</p>
+<p>STL（Standard Template Library）中包含了一系列强大的算法，这些算法用于对容器中的数据进行各种操作，如搜索、排序、转换等。STL的算法库位于 <code>&lt;algorithm&gt;</code> 头文件中，它提供了一组通用的算法，可以用于各种不同类型的容器。以下是一些STL算法的常见操作：</p>
+<ol>
+<li><strong>搜索和查找</strong>：</li>
+<li><code>find</code>：在容器中查找指定值的第一个出现位置。</li>
+<li><code>find_if</code>：根据指定的条件谓词在容器中查找元素。</li>
+<li><code>count</code>：计算容器中等于指定值的元素数量。</li>
+<li><code>count_if</code>：根据指定的条件谓词计算容器中满足条件的元素数量。</li>
+<li>
+<p><code>search</code>：在容器中查找一个序列的第一个匹配位置。</p>
+</li>
+<li>
+<p><strong>排序和重排</strong>：</p>
+</li>
+<li><code>sort</code>：对容器中的元素进行排序。</li>
+<li><code>stable_sort</code>：稳定地对容器中的元素进行排序。</li>
+<li><code>partial_sort</code>：部分排序，将容器中的前N个元素进行排序。</li>
+<li>
+<p><code>nth_element</code>：对容器中的元素进行部分排序，使第N个元素成为中间值。</p>
+</li>
+<li>
+<p><strong>拷贝和替换</strong>：</p>
+</li>
+<li><code>copy</code>：将一个容器的内容拷贝到另一个容器。</li>
+<li><code>replace</code>：将容器中等于指定值的元素替换为新值。</li>
+<li>
+<p><code>replace_if</code>：根据条件谓词将容器中满足条件的元素替换为新值。</p>
+</li>
+<li>
+<p><strong>删除和移除</strong>：</p>
+</li>
+<li><code>remove</code>：从容器中移除等于指定值的元素，但不改变容器的大小。</li>
+<li><code>remove_if</code>：根据条件谓词从容器中移除满足条件的元素，但不改变容器的大小。</li>
+<li>
+<p><code>erase</code>：从容器中删除指定位置的元素，可以改变容器的大小。</p>
+</li>
+<li>
+<p><strong>合并和操作</strong>：</p>
+</li>
+<li><code>merge</code>：合并两个有序容器。</li>
+<li><code>transform</code>：对容器中的元素进行变换操作。</li>
+<li>
+<p><code>accumulate</code>：对容器中的元素进行累积操作。</p>
+</li>
+<li>
+<p><strong>比较和判断</strong>：</p>
+</li>
+<li><code>equal</code>：比较两个容器是否相等。</li>
+<li><code>lexicographical_compare</code>：按字典顺序比较两个容器。</li>
+<li>
+<p><code>min_element</code> 和 <code>max_element</code>：找到容器中的最小和最大元素。</p>
+</li>
+<li>
+<p><strong>随机重排</strong>：</p>
+</li>
+<li><code>random_shuffle</code>：随机打乱容器中的元素顺序。</li>
+</ol>
+<h3 id="functors"><strong>函数对象（Functors）</strong>：<a class="headerlink" href="#functors" title="Permanent link">&para;</a></h3>
+<p>函数对象是可调用对象，通常以类的形式实现，用于在STL算法中进行自定义的操作。STL中有一些内置的函数对象，也可以自定义函数对象。</p>
+<p>函数对象（Function Objects），也称为函子（Functor），是一种在C++中使用的可调用对象，它们的行为类似于函数，可以被调用以执行特定的操作。函数对象是C++中的一种函数抽象，它们通常是类对象，重载了函数调用运算符 <code>operator()</code>，使得它们可以像函数一样被调用。</p>
+<p>函数对象具有以下特点：</p>
+<ol>
+<li>
+<p><strong>可调用性</strong>：函数对象可以像函数一样被调用，即可以使用 <code>()</code> 运算符来执行特定操作。</p>
+</li>
+<li>
+<p><strong>状态保存</strong>：函数对象可以具有状态，即它们的行为可以受到对象内部的状态变量的影响，这使得它们更加灵活。</p>
+</li>
+<li>
+<p><strong>自定义行为</strong>：函数对象的行为完全由程序员定义，可以实现各种不同的操作，包括算法、转换、谓词等。</p>
+</li>
+</ol>
+<p>函数对象通常用于STL算法、标准库容器以及其他需要可调用对象的情况，因为STL算法和容器通常接受可调用对象作为参数，以执行特定的操作。例如，你可以定义一个函数对象来指定排序算法的排序准则，然后将该函数对象传递给STL的 <code>sort</code> 算法。</p>
+<p>以下是一个简单的示例，展示如何创建和使用函数对象：</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+
+<span class="c1">// 定义一个函数对象，用于比较两个整数的大小</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Compare</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// 使用函数对象进行排序</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">Compare</span><span class="p">());</span>
+
+<span class="w">    </span><span class="c1">// 输出排序后的结果</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">numbers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>在上述示例中，我们定义了一个函数对象 <code>Compare</code>，它重载了 <code>operator()</code>，以便在排序时用于比较两个整数的大小。然后，我们将该函数对象传递给 <code>std::sort</code> 算法，以实现按照自定义的方式对向量进行排序。</p>
+<p>函数对象的使用在C++中非常常见，它们允许你将自定义的操作与STL算法和容器等标准库组件结合使用，从而提供了更大的灵活性和可定制性。</p>
+<h3 id="adapters"><strong>适配器（Adapters）</strong>：<a class="headerlink" href="#adapters" title="Permanent link">&para;</a></h3>
+<p>STL提供了容器适配器，如栈（stack）、队列（queue）和优先队列（priority_queue），它们是对底层容器的高级封装，用于实现特定的数据结构。</p>
+<p>在C++ STL（Standard Template Library）中，适配器是一种容器或迭代器的包装，它们提供了不同的接口，使得容器或迭代器可以按照新的方式工作或满足特定的需求。适配器通常用于扩展或修改容器或迭代器的功能，使其更适合特定的用途。以下是一些常见的适配器：</p>
+<ol>
+<li><strong>容器适配器</strong>：</li>
+<li><strong>栈（Stack）适配器</strong>：<code>std::stack</code> 是一个基于底层容器的适配器，它提供了栈（先进后出）的操作接口。默认情况下，它基于 <code>std::deque</code> 实现，但你也可以选择其他底层容器。</li>
+<li><strong>队列（Queue）适配器</strong>：<code>std::queue</code> 是一个基于底层容器的适配器，它提供了队列（先进先出）的操作接口。默认情况下，它基于 <code>std::deque</code> 实现。</li>
+<li>
+<p><strong>优先队列（Priority Queue）适配器</strong>：<code>std::priority_queue</code> 是一个基于底层容器的适配器，它提供了优先队列（最大堆或最小堆）的操作接口。默认情况下，它基于 <code>std::vector</code> 实现，但也可以选择其他底层容器。</p>
+</li>
+<li>
+<p><strong>迭代器适配器</strong>：</p>
+</li>
+<li><strong>反向迭代器适配器</strong>：<code>std::reverse_iterator</code> 是一个迭代器适配器，它将迭代器的遍历方向反转，允许你从后向前遍历容器。</li>
+<li><strong>插入迭代器适配器</strong>：<code>std::insert_iterator</code> 是一个迭代器适配器，它允许你将元素插入到容器的指定位置。</li>
+<li>
+<p><strong>流迭代器适配器</strong>：<code>std::istream_iterator</code> 和 <code>std::ostream_iterator</code> 是迭代器适配器，用于从输入流和输出流中读取和写入数据。</p>
+</li>
+<li>
+<p><strong>函数对象适配器</strong>：</p>
+</li>
+<li><strong>函数适配器</strong>：<code>std::bind</code> 和 <code>std::bind_front</code> 允许你创建新的函数对象，可以修改、绑定或重排函数参数，以便用于特定的调用方式。</li>
+<li><strong>函数指针适配器</strong>：<code>std::function</code> 是一个通用的函数对象适配器，可以用于包装不同类型的可调用对象（函数指针、成员函数指针、Lambda表达式等）。</li>
+</ol>
+<p>这些适配器提供了一种扩展或修改标准库组件的方式，使它们更适合特定的问题或用途。使用适配器可以提高代码的可维护性和可重用性，同时允许你以更高级别的抽象方式处理数据结构和算法。不同的适配器适用于不同的情况，具体的选择取决于你的需求和设计目标。</p>
+<h3 id="allocators"><strong>分配器（Allocators）</strong>：<a class="headerlink" href="#allocators" title="Permanent link">&para;</a></h3>
+<p>分配器用于控制内存的分配和释放，STL提供了标准的分配器接口，允许用户自定义内存管理策略。</p>
+<h3 id="_3"><strong>其他工具和辅助类</strong>：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>STL还包含一些其他有用的工具和辅助类，如pair（用于表示两个值的有序对）、tuple（用于表示任意数量的有序对）、bitset（用于位操作）、numeric（数值操作函数）等。</p>
+<h2 id="_4">数据结构<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>数据结构包括了数据的逻辑结构和存储结构</strong></p>
+<p>数据结构是一种用于组织和存储数据的方式或方法，它定义了数据元素之间的关系、操作和访问规则。</p>
+<p>数据结构是计算机科学中非常重要的概念，因为它们直接影响到数据的组织、存储和检索效率，对算法的设计和性能有着深远的影响。</p>
+<p>数据结构可以分为以下几种主要类型：</p>
+<ol>
+<li><strong>线性数据结构</strong>：</li>
+<li>线性数据结构是一种将数据元素按照线性顺序排列的数据结构。其中包括数组（Array）和链表（Linked List）等。</li>
+<li>数组是一种连续存储元素的结构，支持随机访问，但大小固定。</li>
+<li>
+<p>链表是由节点组成的，每个节点包含数据元素和指向下一个节点的指针，支持动态插入和删除。</p>
+</li>
+<li>
+<p><strong>树形数据结构</strong>：</p>
+</li>
+<li>树是一种分层结构，由节点和边组成，每个节点可以有零个或多个子节点。</li>
+<li>
+<p>常见的树形数据结构包括二叉树（Binary Tree）、二叉搜索树（Binary Search Tree）、平衡二叉树（Balanced Binary Tree，如AVL树和红黑树）等。</p>
+</li>
+<li>
+<p><strong>图形数据结构</strong>：</p>
+</li>
+<li>图是由节点（顶点）和边组成的集合，用于表示各种复杂的关系。</li>
+<li>
+<p>图可以分为有向图（Directed Graph）和无向图（Undirected Graph），以及带权图（Weighted Graph）等。</p>
+</li>
+<li>
+<p><strong>哈希表</strong>：</p>
+</li>
+<li>哈希表是一种基于哈希函数的数据结构，用于实现快速的数据检索。</li>
+<li>
+<p>哈希表将数据元素映射到存储桶（Bucket）中，以提高数据访问效率。</p>
+</li>
+<li>
+<p><strong>堆</strong>：</p>
+</li>
+<li>堆是一种特殊的树形数据结构，用于实现优先队列等应用。</li>
+<li>
+<p>堆可以分为最大堆（Max Heap）和最小堆（Min Heap），通常用于获取最大或最小值。</p>
+</li>
+<li>
+<p><strong>其他数据结构</strong>：</p>
+</li>
+<li>还有许多其他类型的数据结构，如栈（Stack）、队列（Queue）、优先队列（Priority Queue）、双端队列（Deque）等，它们都有各自的用途和特点。</li>
+</ol>
+<h2 id="_5">容器和容器适配器<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>容器（Containers）和容器适配器（Container Adapters）是C++中用于存储和组织数据的两种不同的数据结构，它们在功能和使用方式上有很大的区别。</p>
+<h3 id="containers_1">容器（Containers）：<a class="headerlink" href="#containers_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>数据结构</strong>：容器是C++标准库提供的各种数据结构，如<code>std::vector</code>、<code>std::list</code>、<code>std::map</code>等。每种容器都有其特定的数据结构，用于存储和操作数据。</p>
+</li>
+<li>
+<p><strong>功能性</strong>：容器提供了广泛的数据操作功能，包括插入、删除、查找、遍历等。不同类型的容器支持不同的操作，以满足各种需求。</p>
+</li>
+<li>
+<p><strong>数据管理</strong>：容器负责数据的管理和存储。你可以直接使用容器的成员函数来操作数据，无需额外的封装。</p>
+</li>
+<li>
+<p><strong>数据特性</strong>：容器的性能和特性因具体类型而异。例如，<code>std::vector</code>适合随机访问，而<code>std::list</code>适合在中间插入和删除元素。</p>
+</li>
+</ol>
+<h3 id="container-adapters">容器适配器（Container Adapters）：<a class="headerlink" href="#container-adapters" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>封装性</strong>：容器适配器是一种封装了底层容器的数据结构。它们提供了不同于底层容器的接口，以适应特定的数据访问模式。</p>
+</li>
+<li>
+<p><strong>功能性</strong>：容器适配器通常提供了有限的功能，专注于特定的数据操作模式。例如，<code>std::stack</code>提供了栈操作，而<code>std::queue</code>提供了队列操作。</p>
+</li>
+<li>
+<p><strong>底层容器</strong>：容器适配器依赖于底层容器来存储数据，但通常用户不需要直接访问底层容器。用户只需要与容器适配器进行交互，而不需要关心其底层实现。</p>
+</li>
+<li>
+<p><strong>数据特性</strong>：容器适配器的性能和特性受底层容器的影响。例如，<code>std::stack</code>的性能与其底层容器（通常是<code>std::deque</code>）有关。</p>
+</li>
+</ol>
+<h3 id="_6">区别总结：<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>用途</strong>：容器用于通用数据存储和操作，而容器适配器用于特定数据操作模式的封装，如栈、队列、优先队列等。</p>
+</li>
+<li>
+<p><strong>功能</strong>：容器提供了更广泛的数据操作功能，而容器适配器提供了更有限的功能，以满足特定的数据结构需求。</p>
+</li>
+<li>
+<p><strong>数据结构</strong>：容器具有不同的底层数据结构，而容器适配器依赖于底层容器。</p>
+</li>
+<li>
+<p><strong>直接访问</strong>：通常需要直接操作底层容器的数据时，应该使用容器。容器适配器则更适合对特定操作模式的高级抽象。</p>
+</li>
+</ol>
+<p>总的来说，容器和容器适配器都是C++中用于数据存储和操作的工具，但它们在设计和使用上有明显的不同，你应该根据具体的需求来选择使用哪种数据结构。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      王进钊 CC-BY-4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/674354104" target="_blank" rel="noopener" title="Bilibili | 王进钊" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/zhaozhao626" target="_blank" rel="noopener" title="GitHub | zhaozhao626" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "navigation.path"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
