@@ -14,12 +14,16 @@ nav:
   - 算法学习:
     - ALGORITHM/算法基础篇.md
     - ALGORITHM/算法模板.md
+    - ALGORITHM/ACM模式各种输入总结C++版.md
+    - ALGORITHM/STL.md
     - ALGORITHM/数组.md
     - ALGORITHM/链表.md
     - ALGORITHM/哈希表.md
     - ALGORITHM/字符串.md
+    - ALGORITHM/栈和队列.md
     - ALGORITHM/二叉树.md
     - ALGORITHM/二叉树2.md
+    - ALGORITHM/回溯算法.md
     
   - 博客:
     - BLOG/index.md
